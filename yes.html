@@ -1,29 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div>
-        <h1 class="header_text">Yeeyy ! Finally</h1>
-      </div>
-      <div class="gif_container">
-        <img
-          src="https://i.postimg.cc/wTDG30TB/yes.gif"
-          alt="Cute animated illustration"
-        />
-      </div>
+  const mouseProgress = (x - startX) * speedDrag
+  progress = progress + mouseProgress
+  startX = x
+  animate()
+}
 
-      
-      <a href="https://www.instagram.com/mr.psycho1official?igsh=b3R1ZG03NHI0dXk3"><button class="btn" id="yesButton" onclick="nextPage()">
-        Let's Fix a Date
-      </button></a>
+const handleMouseDown = e => {
+  isDown = true
+  startX = e.clientX || (e.touches && e.touches[0].clientX) || 0
+}
 
+const handleMouseUp = () => {
+  isDown = false
+}
 
-
-    </div>
-  </body>
-</html>
-
-
+/*--------------------
+Listeners
+--------------------*/
+document.addEventListener('mousewheel', handleWheel)
+document.addEventListener('mousedown', handleMouseDown)
+document.addEventListener('mousemove', handleMouseMove)
+document.addEventListener('mouseup', handleMouseUp)
+document.addEventListener('touchstart', handleMouseDown)
+document.addEventListener('touchmove', handleMouseMove)
+document.addEventListener('touchend', handleMouseUp)
