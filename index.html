@@ -1,1021 +1,79 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="dark">
-<head>
-<meta charset="UTF-8">
-<title>Responsive Image Carousel ( Animation )</title>
-<link rel="dns-prefetch" href="https://apc.codepen.io">
-<style type="text/css">@font-face {font-family:Lato;font-style:normal;font-weight:400;src:url(/cf-fonts/s/lato/5.0.15/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Lato;font-style:normal;font-weight:400;src:url(/cf-fonts/s/lato/5.0.15/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Lato;font-style:normal;font-weight:700;src:url(/cf-fonts/s/lato/5.0.15/latin-ext/700/normal.woff2);unicode-range:U+0100-02AF,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Lato;font-style:normal;font-weight:700;src:url(/cf-fonts/s/lato/5.0.15/latin/700/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Lato;font-style:normal;font-weight:900;src:url(/cf-fonts/s/lato/5.0.15/latin-ext/900/normal.woff2);unicode-range:U+0100-02AF,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Lato;font-style:normal;font-weight:900;src:url(/cf-fonts/s/lato/5.0.15/latin/900/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Lato;font-style:italic;font-weight:400;src:url(/cf-fonts/s/lato/5.0.15/latin/400/italic.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Lato;font-style:italic;font-weight:400;src:url(/cf-fonts/s/lato/5.0.15/latin-ext/400/italic.woff2);unicode-range:U+0100-02AF,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}</style>
-<meta name="twitter:title" content="Responsive Image Carousel ( Animation )">
-<meta name="twitter:description" content="...">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://shots.codepen.io/username/pen/ZEwLGXB-800.jpg?version=1699319093">
-<meta property="og:image" content="https://shots.codepen.io/username/pen/ZEwLGXB-800.jpg?version=1699319093" itemprop="thumbnailUrl">
-<meta property="og:title" content="Responsive Image Carousel ( Animation )">
-<meta property="og:url" content="https://codepen.io/noirsociety/details/ZEwLGXB">
-<meta property="og:description" content="...">
-<link rel="alternate" type="application/json+oembed" href="https://codepen.io/api/oembed?url=https%3A%2F%2Fcodepen.io%2Fnoirsociety%2Fpen%2FZEwLGXB&format=json" title="Responsive Image Carousel ( Animation )" />
-<link rel="stylesheet" media="all" href="https://cpwebassets.codepen.io/assets/global/global-211a3a07c1b8d06ea53422699649c3fc4e12d6b0d7b680e2016340b9a3b271f8.css" />
-<link rel="stylesheet" media="screen" href="https://cpwebassets.codepen.io/assets/packs/css/everypage-721b958d.css" />
-<link rel="stylesheet" media="all" href="https://cpwebassets.codepen.io/assets/editor/editor-75a3410c54547f67d3cad55fd247f26214bd6ec3be5dbe954792607261d58059.css" />
-<meta name="description" content="...">
-<link rel="stylesheet" media="screen" href="https://cpwebassets.codepen.io/assets/editor/themes/twilight-9aaad4bd050a758efcccf9634971f22198f8e6930c967d2b826c2eb6e2b72dab.css" id="cm-theme" />
-<style id="cm-font-family" class="cm-font-family" nonce="1kVbHKdvOPk=">
-  
-  .CodeMirror,
-  .console-logs .console-line,
-  .console-command-line-input,
-  .console-message,
-  .CodeMirror-hint {
-    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo,
-  monospace;
-  }
-</style>
-<style id="cm-font-size" nonce="1kVbHKdvOPk=">
-  .CodeMirror,
-  .console-logs .console-line,
-  .console-command-line-input,
-  .console-message,
-  .CodeMirror-hint {
-    font-size: 15px;
-  }
-</style>
-<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
-<meta name="apple-mobile-web-app-title" content="CodePen">
-<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
-<link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111" />
-<meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="gZ3T8VBiarxjciCHOGUNtQ8VN8poR6iaZtMlJYbdTRCpN4PzA9kzdDlVDsYCckDheg3TpIKYWMrtGECl+1znjw==" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="apple-mobile-web-app-capable" content="yes">
-</head>
-<body class="room-editor editor state-htmlOn-cssOn-jsOn twilight preload prelayout
-  layout-top
- logged-in
-">
-<header class="main-header" id="main-header">
-</header>
-<div class="item-settings-modal tab-layout tab-layout-modal pen  item-settings-modal-half" id="item-settings-modal">
-<header class="item-settings-modal-header tab-layout-header">
-<h2 class="item-settings-modal-header-title tab-layout-header-title">Pen Settings</h2>
-<div class="save-and-close-wrap">
-<button type="button" class="button mini-button button-no-right-margin close" id="top-close-settings">
-<svg class="icon-x" viewBox="0 0 100 100">
-<path d="M96.8 83.7L63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z" />
-</svg>
-</button>
-</div>
-</header>
-<div class="tabs tab-layout-wrapper settings-tabs-wrapper">
-<nav id="settings-tabs" class="no-mobile-nav tab-layout-tabs item-settings-tabs  notranslate" translate="no">
-<div class="tab-layout-tab-group">
-<a id="settings-html-tab" href="#settings-html" class="settings-tab-html" data-type="html">
-HTML
-</a>
-<a id="settings-css-tab" href="#settings-css" class="settings-tab-css" data-type="css">
-CSS
-</a>
-<a id="settings-js-tab" href="#settings-js" class="settings-tab-js" data-type="js">
-JS
-</a>
-</div>
-<div class="tab-layout-tab-group">
-<a id="settings-behavior-tab" href="#settings-behavior" class="settings-tab-behavior" data-type="behavior">
-Behavior
-</a>
-<a id="settings-editor-tab" href="#settings-editor" class="settings-tab-editor" data-type="editor">
-Editor
-</a>
-</div>
-</nav>
-<div class="settings tab-page" id="settings-html">
-<h3 aria-label="HTML">HTML</h3>
-<div class="settings-row top-label-form normal-labels">
-<h4>
-<label for="html-preprocessor">
-HTML Preprocessor
-</label>
-</h4>
-<div class="help-flyout-link">
-<svg class="icon-help" viewBox="0 0 100 100">
-<path d="M75,0H25C11.19,0,0,11.193,0,25v50c0,13.802,11.19,25,25,25h50c13.811,0,25-11.198,25-25V25C100,11.193,88.811,0,75,0z
-   M57.203,85.067H41.504V72.542h15.699V85.067L57.203,85.067z M73.357,42.041c-0.84,2.066-1.873,3.834-3.102,5.298
-  c-1.235,1.474-2.604,2.718-4.101,3.751c-1.498,1.035-2.922,2.066-4.249,3.101c-1.333,1.034-1.553,2.214-2.596,3.547
-  c-1.025,1.335-0.977,3.004-0.977,5.006v3.924H41.668v-4.623c0-2.864,1.366-5.265,2.27-7.202c0.896-1.935,2.255-3.581,3.459-4.947
-  c1.196-1.367,2.62-2.556,3.955-3.557c1.327-0.993,2.637-1.993,3.776-2.995c1.123-1.001,2.083-2.1,2.783-3.304
-  c0.7-1.197,1.043-2.694,0.977-4.5c0-3.06-0.74-5.33-2.245-6.795c-1.498-1.465-3.582-2.206-6.25-2.206c-1.8,0-3.337,0.351-4.639,1.05
-  c-1.303,0.7-2.369,1.635-3.199,2.808c-0.837,1.163-1.448,3.593-1.847,5.156c-0.407,1.57-0.602,6.115-0.602,6.115H25.399
-  c0.073-8.333,0.684-7.963,1.855-10.965c1.164-2.995,2.8-6.132,4.899-8.33c2.099-2.197,4.63-4.179,7.601-5.417
-  c2.962-1.228,6.283-1.977,9.945-1.977c4.736,0,8.683,0.581,11.856,1.876c3.167,1.302,5.713,2.889,7.65,4.817
-  c1.929,1.937,3.312,4.004,4.149,6.234c0.831,2.237,1.245,4.313,1.245,6.242C74.601,37.354,74.187,39.975,73.357,42.041z" />
-</svg>
-<div class="help-flyout help-flyout-reverse">
-<h5>About HTML Preprocessors</h5>
-<svg class="icon-x" viewBox="0 0 100 100">
-<path d="M96.8 83.7L63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z" />
-</svg>
-<p>HTML preprocessors can make writing HTML more powerful or convenient. For instance, Markdown is designed to be easier to write and read for text documents and you could write a loop in Pug.</p>
-<p><a href="https://blog.codepen.io/documentation/editor/using-html-preprocessors/" target="_blank" rel="noopener">Learn more</a> &middot; <a href="/versions/" target="_blank" rel="noopener">Versions</a></p>
-</div>
-</div>
-<div class="custom-select-wrap">
-<select name="html-preprocessor" id="html-preprocessor" class="fullwidth">
-<option value="none">None</option>
-<option value="haml">Haml</option>
-<option value="markdown">Markdown</option>
-<option value="slim">Slim</option>
-<option value="pug">Pug</option>
-</select>
-<div class="select-icon">
-<svg viewBox="-122.9 121.1 105.9 61.9" class="icon-arrow-down-mini">
-<path d="M-63.2,180.3l43.5-43.5c1.7-1.7,2.7-4,2.7-6.5s-1-4.8-2.7-6.5c-1.7-1.7-4-2.7-6.5-2.7s-4.8,1-6.5,2.7l-37.2,37.2l-37.2-37.2
-        c-1.7-1.7-4-2.7-6.5-2.7s-4.8,1-6.5,2.6c-1.9,1.8-2.8,4.2-2.8,6.6c0,2.3,0.9,4.6,2.6,6.5l0,0c11.4,11.5,41,41.2,43,43.3l0.2,0.2
-        C-73.5,183.9-66.8,183.9-63.2,180.3z" />
-</svg>
-<svg viewBox="-122.9 121.1 105.9 61.9" class="icon-arrow-down-mini">
-<path d="M-63.2,180.3l43.5-43.5c1.7-1.7,2.7-4,2.7-6.5s-1-4.8-2.7-6.5c-1.7-1.7-4-2.7-6.5-2.7s-4.8,1-6.5,2.7l-37.2,37.2l-37.2-37.2
-        c-1.7-1.7-4-2.7-6.5-2.7s-4.8,1-6.5,2.6c-1.9,1.8-2.8,4.2-2.8,6.6c0,2.3,0.9,4.6,2.6,6.5l0,0c11.4,11.5,41,41.2,43,43.3l0.2,0.2
-        C-73.5,183.9-66.8,183.9-63.2,180.3z" />
-</svg>
-</div>
-</div>
-</div>
-<div class="settings-row top-label-form normal-labels">
-<h4>
-<label for="html-classes">Add Class(es) to &lt;html></label>
-</h4>
-<div class="help-flyout-link">
-<svg class="icon-help" viewBox="0 0 100 100">
-<path d="M75,0H25C11.19,0,0,11.193,0,25v50c0,13.802,11.19,25,25,25h50c13.811,0,25-11.198,25-25V25C100,11.193,88.811,0,75,0z
-   M57.203,85.067H41.504V72.542h15.699V85.067L57.203,85.067z M73.357,42.041c-0.84,2.066-1.873,3.834-3.102,5.298
-  c-1.235,1.474-2.604,2.718-4.101,3.751c-1.498,1.035-2.922,2.066-4.249,3.101c-1.333,1.034-1.553,2.214-2.596,3.547
-  c-1.025,1.335-0.977,3.004-0.977,5.006v3.924H41.668v-4.623c0-2.864,1.366-5.265,2.27-7.202c0.896-1.935,2.255-3.581,3.459-4.947
-  c1.196-1.367,2.62-2.556,3.955-3.557c1.327-0.993,2.637-1.993,3.776-2.995c1.123-1.001,2.083-2.1,2.783-3.304
-  c0.7-1.197,1.043-2.694,0.977-4.5c0-3.06-0.74-5.33-2.245-6.795c-1.498-1.465-3.582-2.206-6.25-2.206c-1.8,0-3.337,0.351-4.639,1.05
-  c-1.303,0.7-2.369,1.635-3.199,2.808c-0.837,1.163-1.448,3.593-1.847,5.156c-0.407,1.57-0.602,6.115-0.602,6.115H25.399
-  c0.073-8.333,0.684-7.963,1.855-10.965c1.164-2.995,2.8-6.132,4.899-8.33c2.099-2.197,4.63-4.179,7.601-5.417
-  c2.962-1.228,6.283-1.977,9.945-1.977c4.736,0,8.683,0.581,11.856,1.876c3.167,1.302,5.713,2.889,7.65,4.817
-  c1.929,1.937,3.312,4.004,4.149,6.234c0.831,2.237,1.245,4.313,1.245,6.242C74.601,37.354,74.187,39.975,73.357,42.041z" />
-</svg>
-<div class="help-flyout help-flyout-reverse">
-<h5>Adding Classes</h5>
-<svg class="icon-x" viewBox="0 0 100 100">
-<path d="M96.8 83.7L63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z" />
-</svg>
-<p>In CodePen, whatever you write in the HTML editor is what goes within the <code>&lt;body></code> tags in <a target="_blank" rel="noopener" href="https://blog.codepen.io/documentation/features/preview-template/">a basic HTML5 template</a>. So you don't have access to higher-up elements like the <code>&lt;html></code> tag. If you want to add classes there that can affect the whole document, this is the place to do it.</p>
-</div>
-</div>
-<input type="text" id="html-classes" name="html-classes" class="fullwidth" placeholder="e.g. single post post-1234" maxlength="250">
-</div>
-<div class="settings-row top-label-form normal-labels">
-<h4>
-<label for="head-content">Stuff for &lt;head></label>
-</h4>
-<div class="help-flyout-link">
-<svg class="icon-help" viewBox="0 0 100 100">
-<path d="M75,0H25C11.19,0,0,11.193,0,25v50c0,13.802,11.19,25,25,25h50c13.811,0,25-11.198,25-25V25C100,11.193,88.811,0,75,0z
-   M57.203,85.067H41.504V72.542h15.699V85.067L57.203,85.067z M73.357,42.041c-0.84,2.066-1.873,3.834-3.102,5.298
-  c-1.235,1.474-2.604,2.718-4.101,3.751c-1.498,1.035-2.922,2.066-4.249,3.101c-1.333,1.034-1.553,2.214-2.596,3.547
-  c-1.025,1.335-0.977,3.004-0.977,5.006v3.924H41.668v-4.623c0-2.864,1.366-5.265,2.27-7.202c0.896-1.935,2.255-3.581,3.459-4.947
-  c1.196-1.367,2.62-2.556,3.955-3.557c1.327-0.993,2.637-1.993,3.776-2.995c1.123-1.001,2.083-2.1,2.783-3.304
-  c0.7-1.197,1.043-2.694,0.977-4.5c0-3.06-0.74-5.33-2.245-6.795c-1.498-1.465-3.582-2.206-6.25-2.206c-1.8,0-3.337,0.351-4.639,1.05
-  c-1.303,0.7-2.369,1.635-3.199,2.808c-0.837,1.163-1.448,3.593-1.847,5.156c-0.407,1.57-0.602,6.115-0.602,6.115H25.399
-  c0.073-8.333,0.684-7.963,1.855-10.965c1.164-2.995,2.8-6.132,4.899-8.33c2.099-2.197,4.63-4.179,7.601-5.417
-  c2.962-1.228,6.283-1.977,9.945-1.977c4.736,0,8.683,0.581,11.856,1.876c3.167,1.302,5.713,2.889,7.65,4.817
-  c1.929,1.937,3.312,4.004,4.149,6.234c0.831,2.237,1.245,4.313,1.245,6.242C74.601,37.354,74.187,39.975,73.357,42.041z" />
-</svg>
-<div class="help-flyout help-flyout-reverse">
-<h5>About the &lt;head></h5>
-<svg class="icon-x" viewBox="0 0 100 100">
-<path d="M96.8 83.7L63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z" />
-</svg>
-<p>In CodePen, whatever you write in the HTML editor is what goes within the <code>&lt;body></code> tags in <a target="_blank" rel="noopener" href="https://blog.codepen.io/documentation/features/preview-template/">a basic HTML5 template</a>. If you need things in the <code>&lt;head></code> of the document, put that code here.</p>
-</div>
-</div>
-<div class="head-content-wrapper">
-<textarea id="head-content" name="head-content" class="fullwidth is-code head-content notranslate" translate="no" placeholder="e.g. &lt;meta>, &lt;link>, &lt;script>"></textarea>
-<span class="insecure-resource-tooltip resource-problem-tooltip">
-<div class="help-flyout-link">
-<span class="icon-help">!</span>
-<div class="help-flyout help-flyout-reverse">
-<svg class="icon-x" viewBox="0 0 100 100">
-<path d="M96.8 83.7L63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z" />
-</svg>
-<h5>Insecure Resource</h5>
-<p>The resource you are linking to is using the 'http' protocol, which may not work when the browser is using https.</p>
-</div>
-</div>
-</span>
-</div>
-<button class="button mini-button button-medium" id="meta-tag-insert">↑ Insert the most common viewport meta tag</button>
-</div>
-</div>
-<div class="settings tab-page" id="settings-css">
-<h3 aria-label="CSS">CSS</h3>
-<div class="settings-row top-label-form normal-labels">
-<h4>
-<label for="css-preprocessor">
-CSS Preprocessor
-</label>
-</h4>
-<div class="help-flyout-link">
-<svg class="icon-help" viewBox="0 0 100 100">
-<path d="M75,0H25C11.19,0,0,11.193,0,25v50c0,13.802,11.19,25,25,25h50c13.811,0,25-11.198,25-25V25C100,11.193,88.811,0,75,0z
-   M57.203,85.067H41.504V72.542h15.699V85.067L57.203,85.067z M73.357,42.041c-0.84,2.066-1.873,3.834-3.102,5.298
-  c-1.235,1.474-2.604,2.718-4.101,3.751c-1.498,1.035-2.922,2.066-4.249,3.101c-1.333,1.034-1.553,2.214-2.596,3.547
-  c-1.025,1.335-0.977,3.004-0.977,5.006v3.924H41.668v-4.623c0-2.864,1.366-5.265,2.27-7.202c0.896-1.935,2.255-3.581,3.459-4.947
-  c1.196-1.367,2.62-2.556,3.955-3.557c1.327-0.993,2.637-1.993,3.776-2.995c1.123-1.001,2.083-2.1,2.783-3.304
-  c0.7-1.197,1.043-2.694,0.977-4.5c0-3.06-0.74-5.33-2.245-6.795c-1.498-1.465-3.582-2.206-6.25-2.206c-1.8,0-3.337,0.351-4.639,1.05
-  c-1.303,0.7-2.369,1.635-3.199,2.808c-0.837,1.163-1.448,3.593-1.847,5.156c-0.407,1.57-0.602,6.115-0.602,6.115H25.399
-  c0.073-8.333,0.684-7.963,1.855-10.965c1.164-2.995,2.8-6.132,4.899-8.33c2.099-2.197,4.63-4.179,7.601-5.417
-  c2.962-1.228,6.283-1.977,9.945-1.977c4.736,0,8.683,0.581,11.856,1.876c3.167,1.302,5.713,2.889,7.65,4.817
-  c1.929,1.937,3.312,4.004,4.149,6.234c0.831,2.237,1.245,4.313,1.245,6.242C74.601,37.354,74.187,39.975,73.357,42.041z" />
-</svg>
-<div class="help-flyout help-flyout-reverse">
-<h5>About CSS Preprocessors</h5>
-<svg class="icon-x" viewBox="0 0 100 100">
-<path d="M96.8 83.7L63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z" />
-</svg>
-<p>CSS preprocessors help make authoring CSS easier. All of them offer things like variables and mixins to provide convenient abstractions.</p>
-<p><a href="https://blog.codepen.io/documentation/editor/using-css-preprocessors/" target="_blank">Learn more</a> &middot; <a href="/versions/" target="_blank">Versions</a></p>
-</div>
-</div>
-<div class="custom-select-wrap">
-<select name="css-preprocessor" id="css-preprocessor" class="fullwidth css-preprocessor">
-<option value="none">None</option>
-<option value="less">Less</option>
-<option value="scss">SCSS</option>
-<option value="sass">Sass</option>
-<option value="stylus">Stylus</option>
-<option value="postcss">PostCSS</option>
-</select>
-<div class="select-icon">
-<svg viewBox="-122.9 121.1 105.9 61.9" class="icon-arrow-down-mini">
-<path d="M-63.2,180.3l43.5-43.5c1.7-1.7,2.7-4,2.7-6.5s-1-4.8-2.7-6.5c-1.7-1.7-4-2.7-6.5-2.7s-4.8,1-6.5,2.7l-37.2,37.2l-37.2-37.2
-        c-1.7-1.7-4-2.7-6.5-2.7s-4.8,1-6.5,2.6c-1.9,1.8-2.8,4.2-2.8,6.6c0,2.3,0.9,4.6,2.6,6.5l0,0c11.4,11.5,41,41.2,43,43.3l0.2,0.2
-        C-73.5,183.9-66.8,183.9-63.2,180.3z" />
-</svg>
-<svg viewBox="-122.9 121.1 105.9 61.9" class="icon-arrow-down-mini">
-<path d="M-63.2,180.3l43.5-43.5c1.7-1.7,2.7-4,2.7-6.5s-1-4.8-2.7-6.5c-1.7-1.7-4-2.7-6.5-2.7s-4.8,1-6.5,2.7l-37.2,37.2l-37.2-37.2
-        c-1.7-1.7-4-2.7-6.5-2.7s-4.8,1-6.5,2.6c-1.9,1.8-2.8,4.2-2.8,6.6c0,2.3,0.9,4.6,2.6,6.5l0,0c11.4,11.5,41,41.2,43,43.3l0.2,0.2
-        C-73.5,183.9-66.8,183.9-63.2,180.3z" />
-</svg>
-</div>
-</div>
-<div id="need-an-addon" class="align-right hide">
-<a id="css-need-an-addon-button" href="#0" class="button button-medium mini-button need-an-addon-button">
-Need an add-on?
-</a>
-</div>
-<div class="add-ons add-ons-scss hide" id="add-ons"></div>
-</div>
-<div id="startercss-options-form" class="settings-row top-label-form">
-<h4>
-CSS Base
-</h4>
-<div class="help-flyout-link">
-<svg class="icon-help" viewBox="0 0 100 100">
-<path d="M75,0H25C11.19,0,0,11.193,0,25v50c0,13.802,11.19,25,25,25h50c13.811,0,25-11.198,25-25V25C100,11.193,88.811,0,75,0z
-   M57.203,85.067H41.504V72.542h15.699V85.067L57.203,85.067z M73.357,42.041c-0.84,2.066-1.873,3.834-3.102,5.298
-  c-1.235,1.474-2.604,2.718-4.101,3.751c-1.498,1.035-2.922,2.066-4.249,3.101c-1.333,1.034-1.553,2.214-2.596,3.547
-  c-1.025,1.335-0.977,3.004-0.977,5.006v3.924H41.668v-4.623c0-2.864,1.366-5.265,2.27-7.202c0.896-1.935,2.255-3.581,3.459-4.947
-  c1.196-1.367,2.62-2.556,3.955-3.557c1.327-0.993,2.637-1.993,3.776-2.995c1.123-1.001,2.083-2.1,2.783-3.304
-  c0.7-1.197,1.043-2.694,0.977-4.5c0-3.06-0.74-5.33-2.245-6.795c-1.498-1.465-3.582-2.206-6.25-2.206c-1.8,0-3.337,0.351-4.639,1.05
-  c-1.303,0.7-2.369,1.635-3.199,2.808c-0.837,1.163-1.448,3.593-1.847,5.156c-0.407,1.57-0.602,6.115-0.602,6.115H25.399
-  c0.073-8.333,0.684-7.963,1.855-10.965c1.164-2.995,2.8-6.132,4.899-8.33c2.099-2.197,4.63-4.179,7.601-5.417
-  c2.962-1.228,6.283-1.977,9.945-1.977c4.736,0,8.683,0.581,11.856,1.876c3.167,1.302,5.713,2.889,7.65,4.817
-  c1.929,1.937,3.312,4.004,4.149,6.234c0.831,2.237,1.245,4.313,1.245,6.242C74.601,37.354,74.187,39.975,73.357,42.041z" />
-</svg>
-<div class="help-flyout help-flyout-reverse">
-<h5>About CSS Base</h5>
-<svg class="icon-x" viewBox="0 0 100 100">
-<path d="M96.8 83.7L63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z" />
-</svg>
-<p>It's a common practice to apply CSS to a page that styles elements such that they are consistent across all browsers. We offer two of the most popular choices: <a href="http://necolas.github.io/normalize.css/" target="_blank" rel="noopener">normalize.css</a> and a <a href="http://meyerweb.com/eric/tools/css/reset/" target="_blank" rel="noopener">reset</a>. Or, choose <b>Neither</b> and nothing will be applied.</p>
-</div>
-</div>
-<ul class="radio-list">
-<li>
-<input type="radio" id="startercss-normalize" name="startercss" checked value="normalize">
-<label for="startercss-normalize" class="small-inline">Normalize</label>
-</li>
-<li>
-<input type="radio" id="startercss-reset" name="startercss" checked value="reset">
-<label for="startercss-reset" class="small-inline">Reset</label>
-</li>
-<li>
-<input type="radio" id="startercss-neither" name="startercss" checked value="neither">
-<label for="startercss-neither" class="small-inline">Neither</label>
-</li>
-</ul>
-</div>
-<div id="prefix-options-form" class="settings-row top-label-form">
-<h4>
-Vendor Prefixing
-</h4>
-<div class="help-flyout-link">
-<svg class="icon-help" viewBox="0 0 100 100">
-<path d="M75,0H25C11.19,0,0,11.193,0,25v50c0,13.802,11.19,25,25,25h50c13.811,0,25-11.198,25-25V25C100,11.193,88.811,0,75,0z
-   M57.203,85.067H41.504V72.542h15.699V85.067L57.203,85.067z M73.357,42.041c-0.84,2.066-1.873,3.834-3.102,5.298
-  c-1.235,1.474-2.604,2.718-4.101,3.751c-1.498,1.035-2.922,2.066-4.249,3.101c-1.333,1.034-1.553,2.214-2.596,3.547
-  c-1.025,1.335-0.977,3.004-0.977,5.006v3.924H41.668v-4.623c0-2.864,1.366-5.265,2.27-7.202c0.896-1.935,2.255-3.581,3.459-4.947
-  c1.196-1.367,2.62-2.556,3.955-3.557c1.327-0.993,2.637-1.993,3.776-2.995c1.123-1.001,2.083-2.1,2.783-3.304
-  c0.7-1.197,1.043-2.694,0.977-4.5c0-3.06-0.74-5.33-2.245-6.795c-1.498-1.465-3.582-2.206-6.25-2.206c-1.8,0-3.337,0.351-4.639,1.05
-  c-1.303,0.7-2.369,1.635-3.199,2.808c-0.837,1.163-1.448,3.593-1.847,5.156c-0.407,1.57-0.602,6.115-0.602,6.115H25.399
-  c0.073-8.333,0.684-7.963,1.855-10.965c1.164-2.995,2.8-6.132,4.899-8.33c2.099-2.197,4.63-4.179,7.601-5.417
-  c2.962-1.228,6.283-1.977,9.945-1.977c4.736,0,8.683,0.581,11.856,1.876c3.167,1.302,5.713,2.889,7.65,4.817
-  c1.929,1.937,3.312,4.004,4.149,6.234c0.831,2.237,1.245,4.313,1.245,6.242C74.601,37.354,74.187,39.975,73.357,42.041z" />
-</svg>
-<div class="help-flyout help-flyout-reverse">
-<h5>About Vendor Prefixing</h5>
-<svg class="icon-x" viewBox="0 0 100 100">
-<path d="M96.8 83.7L63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z" />
-</svg>
-<p>To get the best cross-browser support, it is a common practice to apply vendor prefixes to CSS properties and values that require them to work. For instance <code>-webkit-</code> or <code>-moz-</code>.</p>
-<p>We offer two popular choices: <a href="https://github.com/postcss/autoprefixer" target="blank" rel="noopener">Autoprefixer</a> (which processes your CSS server-side) and <a href="http://leaverou.github.io/prefixfree/" target="_blank" rel="noopener">-prefix-free</a> (which applies prefixes via a script, client-side).</p>
-</div>
-</div>
-<ul class="radio-list">
-<li>
-<input type="radio" id="prefix-autoprefixer" name="prefix" value="autoprefixer">
-<label for="prefix-autoprefixer" class="small-inline">Autoprefixer</label>
-</li>
-<li>
-<input type="radio" id="prefix-prefixfree" name="prefix" value="prefixfree">
-<label for="prefix-prefixfree" class="small-inline">Prefixfree</label>
-</li>
-<li>
-<input type="radio" id="prefix-neither" name="prefix" value="neither">
-<label for="prefix-neither" class="small-inline">Neither</label>
-</li>
-</ul>
-</div>
-<div id="external-css-resources" class="settings-row">
-<h4>
-Add External Stylesheets/Pens
-</h4>
-<p>Any URLs added here will be added as <code>&lt;link></code>s in order, and before the CSS in the editor. You can use the CSS from another Pen by using its URL and the proper <a href="https://blog.codepen.io/documentation/url-extensions/">URL extension</a>.</p>
-<div class="resource-search-bar">
-<svg class="icon icon-mag" viewBox="0 0 56.7 56.7">
-<path d="M42.8,7.3C33-2.4,17.1-2.4,7.3,7.3c-9.8,9.8-9.8,25.7,0,35.5c8.7,8.7,22.2,9.7,32,2.9l9.6,9.6c1.8,1.8,4.7,1.8,6.4,0
-	c1.8-1.8,1.8-4.7,0-6.4l-9.6-9.6C52.5,29.5,51.5,16,42.8,7.3z M36.6,36.6c-6.4,6.4-16.7,6.4-23.1,0s-6.4-16.7,0-23.1
-	c6.4-6.4,16.7-6.4,23.1,0C43,19.9,43,30.3,36.6,36.6z" />
-</svg>
-<input id="external-css-search" type="text" value placeholder="Search for resources (Bootstrap, Foundation, Animate.css...)">
-</div>
-<div class="algolia-shoutout">
-<a href="https://www.algolia.com/?utm_source=react-instantsearch&utm_medium=website&utm_content=codepen.io&utm_campaign=poweredby" target="_blank">
-Powered by <img alt="Algolia" src="https://cpwebassets.codepen.io/assets/settings/algolia-9e1c0c887f4db420704b2a79926864019ef156bcecc9d5774a7e4eaa731fc5b5.svg" />
-</a>
-</div>
-<div class="help-flyout-link">
-<svg class="icon-help" viewBox="0 0 100 100">
-<path d="M75,0H25C11.19,0,0,11.193,0,25v50c0,13.802,11.19,25,25,25h50c13.811,0,25-11.198,25-25V25C100,11.193,88.811,0,75,0z
-   M57.203,85.067H41.504V72.542h15.699V85.067L57.203,85.067z M73.357,42.041c-0.84,2.066-1.873,3.834-3.102,5.298
-  c-1.235,1.474-2.604,2.718-4.101,3.751c-1.498,1.035-2.922,2.066-4.249,3.101c-1.333,1.034-1.553,2.214-2.596,3.547
-  c-1.025,1.335-0.977,3.004-0.977,5.006v3.924H41.668v-4.623c0-2.864,1.366-5.265,2.27-7.202c0.896-1.935,2.255-3.581,3.459-4.947
-  c1.196-1.367,2.62-2.556,3.955-3.557c1.327-0.993,2.637-1.993,3.776-2.995c1.123-1.001,2.083-2.1,2.783-3.304
-  c0.7-1.197,1.043-2.694,0.977-4.5c0-3.06-0.74-5.33-2.245-6.795c-1.498-1.465-3.582-2.206-6.25-2.206c-1.8,0-3.337,0.351-4.639,1.05
-  c-1.303,0.7-2.369,1.635-3.199,2.808c-0.837,1.163-1.448,3.593-1.847,5.156c-0.407,1.57-0.602,6.115-0.602,6.115H25.399
-  c0.073-8.333,0.684-7.963,1.855-10.965c1.164-2.995,2.8-6.132,4.899-8.33c2.099-2.197,4.63-4.179,7.601-5.417
-  c2.962-1.228,6.283-1.977,9.945-1.977c4.736,0,8.683,0.581,11.856,1.876c3.167,1.302,5.713,2.889,7.65,4.817
-  c1.929,1.937,3.312,4.004,4.149,6.234c0.831,2.237,1.245,4.313,1.245,6.242C74.601,37.354,74.187,39.975,73.357,42.041z" />
-</svg>
-<div class="help-flyout help-flyout-reverse">
-<h5>About External Resources</h5>
-<svg class="icon-x" viewBox="0 0 100 100">
-<path d="M96.8 83.7L63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z" />
-</svg>
-<p>You can apply CSS to your Pen from any stylesheet on the web. Just put a URL to it here and we'll apply it, in the order you have them, before the CSS in the Pen itself.</p>
-<p>You can also link to another Pen here (use the <code>.css</code> <a href="https://blog.codepen.io/documentation/url-extensions/">URL Extension</a>) and we'll pull the CSS from that Pen and include it. If it's using a <em>matching</em> preprocessor, use the appropriate URL Extension and we'll combine the code before preprocessing, so you can use the linked Pen as a true dependency.</p>
-<p><a href="https://blog.codepen.io/documentation/editor/adding-external-resources/" target="_blank" rel="noopener">Learn more</a></p>
-</div>
-</div>
-<div id="css-external-resources" class="external-resource-wrapper">
-</div>
-<script id="css-external-resources-template" nonce="1kVbHKdvOPk=" type="text/template">
-  <div data-view-id="<%= view_id %>" class="external-resource-url-row <%= insecure_resource %>">
-
-    <span class="move-external-url">
-      <svg viewBox="0 0 17 20" class="icon-drag-handle" width="20" height="17">
-        <path d="m1.5 3a1.5 1.5 0 0 1 0-3h17a1.5 1.5 0 0 1 0 3zm0 7a1.5 1.5 0 0 1 0-3h17a1.5 1.5 0 0 1 0 3zm0 7a1.5 1.5 0 0 1 0-3h17a1.5 1.5 0 0 1 0 3z"/>
-      </svg>
-    </span>
-
-    <input
-      id="external-resource-input-<%= view_id %>"
-      class="fullwidth css-resource external-resource"
-      type="text"
-      pattern="^((ftp|http|https):)?\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?$"
-      name="external-css"
-      placeholder="<%= placeholder %>"
-      value="<%= url %>"
-      data-view-id="<%= view_id %>">
-
-    <span class="insecure-resource-tooltip resource-problem-tooltip">
-      <div class="help-flyout-link">
-        <span class="icon-help">?</span>
-        <div class="help-flyout help-flyout-reverse">
-          <svg class="icon-x" viewBox="0 0 100 100">
-            <path d="M96.8 83.7L63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z"/>
-          </svg>
-          <h5>Insecure Resource</h5>
-          <p>You are linking to a resource using the non-secure http:// protocol, which may not work when the browser is using https:// like CodePen enforces.</p>
-        </div>
+<main>
+  <ul class='slider'>
+    <li class='item' style="background-image: url('https://wallpapercave.com/wp/wp7102416.jpg')">
+      <div class='content'>
+        <h2 class='title'>"bolo jay shree ram"</h2>
+        <p class='description'> jay shree ram </p>
+        <button>Read More</button>
       </div>
-    </span>
-
-    <span class="not-using-url-extension-tooltip resource-problem-tooltip">
-      <div class="help-flyout-link">
-        <span class="icon-help">?</span>
-        <div class="help-flyout help-flyout-reverse">
-          <svg class="icon-x" viewBox="0 0 100 100">
-            <path d="M96.8 83.7L63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z"/>
-          </svg>
-          <h5>URL Extension Required</h5>
-          <p>When linking another Pen as a resource, make sure you use a <a href="https://blog.codepen.io/documentation/url-extensions/">URL Extension</a> of the type of code you want to link to. Either <code>.css</code>, <code>.js</code>, or the extension of a matching code processor.</p>
-        </div>
+    </li>
+    <li class='item' style="background-image: url('https://th.bing.com/th/id/OIP.VpiZ5wP8BNAXNzTmwwDdCwHaEK?w=337&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7')">
+      <div class='content'>
+        <h2 class='title'>"JAY SHREE RAM🚩"</h2>
+        <p class='description'> JAY SHREE RAM🚩
+          <div class="social">
+            <a href="https://www.instagram.com/mr.psycho1official/" target="_blank" <a=""><svg>
+                <use xlink:href="#ico-instagram"></use></svg></a>
+                
+          </div> 
+          <symbol id="ico-instagram" viewBox="0 0 35 35">
+            <circle opacity=".2" cx="17.5" cy="17.5" r="17" stroke="" fill="none"></circle>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M24.944 20.476c.028-.457.042-1.282.042-2.476s-.014-2.019-.042-2.476c-.056-1.09-.378-1.93-.965-2.517s-1.422-.91-2.503-.965C21.018 12.014 20.194 12 19 12s-2.019.014-2.476.042c-1.081.047-1.92.368-2.517.965s-.918 1.436-.965 2.518C13.014 15.98 13 16.805 13 18c0 1.194.014 2.019.042 2.476.047 1.09.368 1.93.965 2.517s1.436.91 2.518.965c.466.028 1.29.042 2.475.042 1.184 0 2.01-.014 2.476-.042 1.072-.047 1.906-.368 2.503-.965.597-.597.918-1.436.965-2.517ZM19 13.075h-1.427c-.186 0-.438.01-.755.029a11.61 11.61 0 0 0-.797.07c-.215.028-.401.08-.56.154-.26.102-.489.251-.685.447-.196.196-.35.425-.461.685-.056.15-.103.336-.14.56a7.843 7.843 0 0 0-.084.811 7.113 7.113 0 0 0-.014.741c.01.178.01.453 0 .826-.01.373-.01.573 0 .601.01.028.01.228 0 .601s-.01.648 0 .826c.01.177.014.424.014.74 0 .318.028.588.084.812l.14.56c.112.26.265.489.461.685.196.196.425.345.685.447.15.056.336.108.56.154.224.047.49.07.797.07.308 0 .56.01.755.028.196.019.471.019.826 0 .354-.019.554-.019.601 0 .047.019.242.019.587 0s.62-.019.826 0c.205.019.456.01.755-.028.298-.037.569-.06.811-.07.242-.01.424-.06.546-.154.26-.102.494-.251.699-.447a1.75 1.75 0 0 0 .447-.686c.056-.149.103-.335.14-.559.038-.224.066-.494.084-.811.019-.317.023-.564.014-.741a11.82 11.82 0 0 1 0-.826c.01-.373.01-.573 0-.601-.01-.028-.01-.228 0-.601s.01-.648 0-.826c-.01-.177-.014-.424-.014-.74 0-.318-.028-.588-.084-.812l-.14-.56a1.956 1.956 0 0 0-1.147-1.133 3.979 3.979 0 0 0-.545-.153 3.915 3.915 0 0 0-.811-.07c-.326 0-.578-.01-.755-.028a5.916 5.916 0 0 0-.826 0c-.372.019-.568.019-.587 0Zm3.706 2.225c.14-.14.21-.308.21-.504a.57.57 0 0 0-.21-.503.767.767 0 0 0-.517-.21.718.718 0 0 0-.504.21.622.622 0 0 0-.21.503c.01.196.08.364.21.504s.299.21.504.21c.205 0 .377-.07.517-.21ZM22.063 18c0 .849-.298 1.576-.895 2.182a2.882 2.882 0 0 1-2.168.895 3.075 3.075 0 0 1-2.182-.895c-.606-.588-.904-1.315-.895-2.182.01-.867.308-1.594.895-2.182.588-.587 1.315-.886 2.182-.895.867-.01 1.59.29 2.168.895.578.606.876 1.333.895 2.182Zm-1.077 0a1.95 1.95 0 0 0-.573-1.413A1.897 1.897 0 0 0 19 16c-.56 0-1.03.196-1.413.587A2.001 2.001 0 0 0 17 18c-.01.55.186 1.021.587 1.413.401.391.872.587 1.413.587.54 0 1.012-.196 1.413-.587.4-.392.592-.863.573-1.413Z" transform="translate(-1.5 -0.5)" fill="var(--fill)"></path>
+          </symbol></p>
+        <button>👆CLICK UP</button>
       </div>
-    </span>
-
-    <div class="resource-actions">
-      <span class="remove-external-url external-url-option" data-view-id="<%= view_id %>">
-        <svg class="icon-x" viewBox="0 0 100 100" width="12" height="12">
-          <path d="M96.8 83.7L63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z"/>
-        </svg>
-      </span>
-
-      <a id="external-resource-input-view-link-<%= view_id %>" class="open-external-url external-url-option" target="_blank" rel="noopener" data-view-id="<%= view_id %>" href="<%= url %>">
-        <svg viewBox="0 0 30.5 16.5" id="icon-eye" width="14" height="14">
-          <path d="M15.3,0C8.9,0,3.3,3.3,0,8.3c3.3,5,8.9,8.3,15.3,8.3c6.4,0,12-3.3,15.3-8.3C27.3,3.3,21.7,0,15.3,0z M15.3,14.5 c-3.4,0-6.2-2.8-6.2-6.2C9,4.8,11.8,2,15.3,2c3.4,0,6.2,2.8,6.2,6.2C21.5,11.7,18.7,14.5,15.3,14.5z"/>
-        </svg>
-      </a>
-    </div>
-
-  </div>
-</script>
-<div class="external-resource-actions group">
-<span id="add-css-resource" class="button mini-button button-medium add-resource" data-type="css">
-<span data-type="css">+ add another resource</span>
-</span>
-</div>
-</div>
-</div>
-<div class="settings tab-page" id="settings-js">
-<div class="item-settings-javascript normal-labels">
-<h3>
-JavaScript
-</h3>
-<div class="item-settings-javascript-preprocessor settings-row">
-<h4>
-<label for="js-preprocessor">
-JavaScript Preprocessor
-</label>
-</h4>
-<div class="help-flyout-link">
-<svg class="icon-help" viewBox="0 0 100 100" width="14" height="14">
-<path d="M75,0H25C11.19,0,0,11.193,0,25v50c0,13.802,11.19,25,25,25h50c13.811,0,25-11.198,25-25V25C100,11.193,88.811,0,75,0z
-   M57.203,85.067H41.504V72.542h15.699V85.067L57.203,85.067z M73.357,42.041c-0.84,2.066-1.873,3.834-3.102,5.298
-  c-1.235,1.474-2.604,2.718-4.101,3.751c-1.498,1.035-2.922,2.066-4.249,3.101c-1.333,1.034-1.553,2.214-2.596,3.547
-  c-1.025,1.335-0.977,3.004-0.977,5.006v3.924H41.668v-4.623c0-2.864,1.366-5.265,2.27-7.202c0.896-1.935,2.255-3.581,3.459-4.947
-  c1.196-1.367,2.62-2.556,3.955-3.557c1.327-0.993,2.637-1.993,3.776-2.995c1.123-1.001,2.083-2.1,2.783-3.304
-  c0.7-1.197,1.043-2.694,0.977-4.5c0-3.06-0.74-5.33-2.245-6.795c-1.498-1.465-3.582-2.206-6.25-2.206c-1.8,0-3.337,0.351-4.639,1.05
-  c-1.303,0.7-2.369,1.635-3.199,2.808c-0.837,1.163-1.448,3.593-1.847,5.156c-0.407,1.57-0.602,6.115-0.602,6.115H25.399
-  c0.073-8.333,0.684-7.963,1.855-10.965c1.164-2.995,2.8-6.132,4.899-8.33c2.099-2.197,4.63-4.179,7.601-5.417
-  c2.962-1.228,6.283-1.977,9.945-1.977c4.736,0,8.683,0.581,11.856,1.876c3.167,1.302,5.713,2.889,7.65,4.817
-  c1.929,1.937,3.312,4.004,4.149,6.234c0.831,2.237,1.245,4.313,1.245,6.242C74.601,37.354,74.187,39.975,73.357,42.041z" />
-</svg>
-<div class="help-flyout help-flyout-reverse">
-<h5>About JavaScript Preprocessors</h5>
-<svg class="icon-x" viewBox="0 0 100 100" width="12" height="12">
-<path d="M96.8 83.7L63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z" />
-</svg>
-<p>JavaScript preprocessors can help make authoring JavaScript easier and more convenient.</p>
-<p><a href="https://blog.codepen.io/documentation/editor/using-js-preprocessors/" target="_blank" rel="noopener">Learn more</a> &middot; <a href="/versions/" target="_blank">Versions</a></p>
-</div>
-</div>
-<div class="custom-select-wrap">
-<select name="js-preprocessor" id="js-preprocessor" class="fullwidth">
-<option value="none">None</option>
-<option value="babel">Babel</option>
-<option value="typescript">TypeScript</option>
-<option value="coffeescript">CoffeeScript</option>
-<option value="livescript">LiveScript</option>
-</select>
-<div class="select-icon">
-<svg viewBox="-122.9 121.1 105.9 61.9" class="icon-arrow-down-mini">
-<path d="M-63.2,180.3l43.5-43.5c1.7-1.7,2.7-4,2.7-6.5s-1-4.8-2.7-6.5c-1.7-1.7-4-2.7-6.5-2.7s-4.8,1-6.5,2.7l-37.2,37.2l-37.2-37.2
-        c-1.7-1.7-4-2.7-6.5-2.7s-4.8,1-6.5,2.6c-1.9,1.8-2.8,4.2-2.8,6.6c0,2.3,0.9,4.6,2.6,6.5l0,0c11.4,11.5,41,41.2,43,43.3l0.2,0.2
-        C-73.5,183.9-66.8,183.9-63.2,180.3z" />
-</svg>
-<svg viewBox="-122.9 121.1 105.9 61.9" class="icon-arrow-down-mini">
-<path d="M-63.2,180.3l43.5-43.5c1.7-1.7,2.7-4,2.7-6.5s-1-4.8-2.7-6.5c-1.7-1.7-4-2.7-6.5-2.7s-4.8,1-6.5,2.7l-37.2,37.2l-37.2-37.2
-        c-1.7-1.7-4-2.7-6.5-2.7s-4.8,1-6.5,2.6c-1.9,1.8-2.8,4.2-2.8,6.6c0,2.3,0.9,4.6,2.6,6.5l0,0c11.4,11.5,41,41.2,43,43.3l0.2,0.2
-        C-73.5,183.9-66.8,183.9-63.2,180.3z" />
-</svg>
-</div>
-</div>
-<p><small>Babel includes JSX processing.</small></p>
-</div>
-<div id="external-js-resources" class="item-settings-javascript-external settings-row external-js-resources top-label-form">
-<h4>
-Add External Scripts/Pens
-</h4>
-<p>Any URL's added here will be added as <code>&lt;script></code>s in order, and run <em>before</em> the JavaScript in the editor. You can use the URL of any other Pen and it will include the JavaScript from that Pen.</p>
-<div class="resource-search-bar">
-<svg viewBox="0 0 56.7 56.7" class="icon icon-mag" width="18" height="18">
-<path d="M42.8,7.3C33-2.4,17.1-2.4,7.3,7.3c-9.8,9.8-9.8,25.7,0,35.5c8.7,8.7,22.2,9.7,32,2.9l9.6,9.6c1.8,1.8,4.7,1.8,6.4,0
-	c1.8-1.8,1.8-4.7,0-6.4l-9.6-9.6C52.5,29.5,51.5,16,42.8,7.3z M36.6,36.6c-6.4,6.4-16.7,6.4-23.1,0s-6.4-16.7,0-23.1
-	c6.4-6.4,16.7-6.4,23.1,0C43,19.9,43,30.3,36.6,36.6z" />
-</svg>
-<input id="external-js-search" type="text" value placeholder="Search CDNjs (jQuery, Lodash, React, Angular, Vue.js, Ember...)">
-</div>
-<div class="algolia-shoutout">
-<a href="https://www.algolia.com/?utm_source=react-instantsearch&utm_medium=website&utm_content=codepen.io&utm_campaign=poweredby" target="_blank">
-Powered by <img alt="Algolia" src="https://cpwebassets.codepen.io/assets/settings/algolia-9e1c0c887f4db420704b2a79926864019ef156bcecc9d5774a7e4eaa731fc5b5.svg" />
-</a>
-</div>
-<div class="help-flyout-link">
-<svg class="icon-help" viewBox="0 0 100 100" width="14" height="14">
-<path d="M75,0H25C11.19,0,0,11.193,0,25v50c0,13.802,11.19,25,25,25h50c13.811,0,25-11.198,25-25V25C100,11.193,88.811,0,75,0z
-   M57.203,85.067H41.504V72.542h15.699V85.067L57.203,85.067z M73.357,42.041c-0.84,2.066-1.873,3.834-3.102,5.298
-  c-1.235,1.474-2.604,2.718-4.101,3.751c-1.498,1.035-2.922,2.066-4.249,3.101c-1.333,1.034-1.553,2.214-2.596,3.547
-  c-1.025,1.335-0.977,3.004-0.977,5.006v3.924H41.668v-4.623c0-2.864,1.366-5.265,2.27-7.202c0.896-1.935,2.255-3.581,3.459-4.947
-  c1.196-1.367,2.62-2.556,3.955-3.557c1.327-0.993,2.637-1.993,3.776-2.995c1.123-1.001,2.083-2.1,2.783-3.304
-  c0.7-1.197,1.043-2.694,0.977-4.5c0-3.06-0.74-5.33-2.245-6.795c-1.498-1.465-3.582-2.206-6.25-2.206c-1.8,0-3.337,0.351-4.639,1.05
-  c-1.303,0.7-2.369,1.635-3.199,2.808c-0.837,1.163-1.448,3.593-1.847,5.156c-0.407,1.57-0.602,6.115-0.602,6.115H25.399
-  c0.073-8.333,0.684-7.963,1.855-10.965c1.164-2.995,2.8-6.132,4.899-8.33c2.099-2.197,4.63-4.179,7.601-5.417
-  c2.962-1.228,6.283-1.977,9.945-1.977c4.736,0,8.683,0.581,11.856,1.876c3.167,1.302,5.713,2.889,7.65,4.817
-  c1.929,1.937,3.312,4.004,4.149,6.234c0.831,2.237,1.245,4.313,1.245,6.242C74.601,37.354,74.187,39.975,73.357,42.041z" />
-</svg>
-<div class="help-flyout help-flyout-reverse">
-<h5>About External Resources</h5>
-<svg class="icon-x" viewBox="0 0 100 100" height="12" width="12">
-<path d="M96.8 83.7L63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z" />
-</svg>
-<p>You can apply a script from anywhere on the web to your Pen. Just put a URL to it here and we'll add it, in the order you have them, before the JavaScript in the Pen itself.</p>
-<p>If the script you link to has the file extension of a preprocessor, we'll attempt to process it before applying.</p>
-<p>You can also link to another Pen here, and we'll pull the JavaScript from that Pen and include it. If it's using a matching preprocessor, we'll combine the code before preprocessing, so you can use the linked Pen as a true dependency.</p>
-<p><a href="https://blog.codepen.io/documentation/adding-external-resources/" rel="noopener" target="_blank">Learn more</a></p>
-</div>
-</div>
-<div id="js-external-resources" class="external-resource-wrapper">
-</div>
-<script id="js-external-resources-template" nonce="1kVbHKdvOPk=" type="text/template">
-  <div data-view-id="<%= view_id %>" class="external-resource-url-row <%= insecure_resource %>">
-
-    <span class="move-external-url">
-      <svg viewBox="0 0 17 20" class="icon-drag-handle" width="20" height="17">
-        <path d="m1.5 3a1.5 1.5 0 0 1 0-3h17a1.5 1.5 0 0 1 0 3zm0 7a1.5 1.5 0 0 1 0-3h17a1.5 1.5 0 0 1 0 3zm0 7a1.5 1.5 0 0 1 0-3h17a1.5 1.5 0 0 1 0 3z"/>
-      </svg>
-    </span>
-
-    <input
-      id="external-resource-input-<%= view_id %>"
-      class="fullwidth js-resource external-resource"
-      type="text"
-      pattern="^((ftp|http|https):)?\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?$"
-      name="external-js"
-      placeholder="<%= placeholder %>"
-      value="<%= url %>"
-      data-view-id="<%= view_id %>">
-
-    <span class="insecure-resource-tooltip resource-problem-tooltip">
-      <div class="help-flyout-link">
-        <span class="icon-help">?</span>
-        <div class="help-flyout help-flyout-reverse">
-          <svg class="icon-x" viewBox="0 0 100 100">
-            <path d="M96.8 83.7L63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z"/>
-          </svg>
-          <h5>Insecure Resource</h5>
-          <p>You are linking to a resource using the non-secure http:// protocol, which may not work when the browser is using https:// like CodePen enforces.</p>
-        </div>
+    </li>
+    <li class='item' style="background-image: url('https://www.bhagwanbhagat.com/wp-content/uploads/2021/03/Full-HD-Ayodhya-Ram-Mandir-Photo.jpeg')">
+      <div class='content'>
+        <h2 class='title'>"bolo ram ram"</h2>
+        <p class='description'>
+        JAY SHREE RAM</p>
+        <button>Read More</button>
       </div>
-    </span>
-
-    <span class="not-using-url-extension-tooltip resource-problem-tooltip">
-      <div class="help-flyout-link">
-        <span class="icon-help">?</span>
-        <div class="help-flyout help-flyout-reverse">
-          <svg class="icon-x" viewBox="0 0 100 100">
-            <path d="M96.8 83.7L63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z"/>
-          </svg>
-          <h5>URL Extension Required</h5>
-          <p>When linking another Pen as a resource, make sure you use a <a href="https://blog.codepen.io/documentation/url-extensions/">URL Extension</a> of the type of code you want to link to. Either <code>.css</code>, <code>.js</code>, or the extension of a matching code processor.</p>
-        </div>
+    </li>
+    <li class='item' style="background-image: url('https://wallpaperaccess.com/full/2476580.jpg')">
+      <div class='content'>
+        <h2 class='title'>"JAY SHREE RAM"</h2>
+        <p class='description'>
+         JAY SHREE RAM
+        </p>
+        <button>Read More</button>
       </div>
-    </span>
+    </li>
+    <li class='item' style="background-image: url('https://th.bing.com/th/id/OIP.CsYeDshmWO7XnctWALzF7wE4DH?w=227&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7')">
+      <div class='content'>
+        <h2 class='title'>"jor se bolo🚩"</h2>
+        <p class='description'>
+          jay shree ram🚩
+        </p>
+        <button>Read More</button>
+      </div>
+    </li>
+    <li class='item' style="background-image: url('https://wallpapers.com/images/hd/jai-shree-ram-hd-temple-2w05rywrpj2j49yw.jpg')">
+      <div class='content'>
+        <h2 class='title'>"JAY SHREE RAM"</h2>
+        <p class='description'> JAY SHREE RAM </p>
+        <button>Read More</button>
+      </div>
+    </li>
+  </ul>
+  <nav class='nav'>
+    <ion-icon class='btn prev' name="arrow-back-outline"></ion-icon>
+    <ion-icon class='btn next' name="arrow-forward-outline"></ion-icon>
+  </nav>
+</main>
 
-    <div class="resource-actions">
-      <span class="remove-external-url external-url-option" data-view-id="<%= view_id %>">
-        <svg class="icon-x" viewBox="0 0 100 100" width="12" height="12">
-          <path d="M96.8 83.7L63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z"/>
-        </svg>
-      </span>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-      <a id="external-resource-input-view-link-<%= view_id %>" class="open-external-url external-url-option" target="_blank" rel="noopener" data-view-id="<%= view_id %>" href="<%= url %>">
-        <svg viewBox="0 0 30.5 16.5" id="icon-eye" width="14" height="14">
-          <path d="M15.3,0C8.9,0,3.3,3.3,0,8.3c3.3,5,8.9,8.3,15.3,8.3c6.4,0,12-3.3,15.3-8.3C27.3,3.3,21.7,0,15.3,0z M15.3,14.5 c-3.4,0-6.2-2.8-6.2-6.2C9,4.8,11.8,2,15.3,2c3.4,0,6.2,2.8,6.2,6.2C21.5,11.7,18.7,14.5,15.3,14.5z"/>
-        </svg>
-      </a>
-    </div>
 
-  </div>
-</script>
-<div class="external-resource-actions group">
-<span id="add-js-resource" class="button button-medium mini-button add-resource" data-type="js">
-<span data-type="js">+ add another resource</span>
-</span>
-</div>
-</div>
-<h3 aria-label="Packages">Packages</h3>
-<div class="item-settings-packages settings-row" id="item-settings-packages">
-<h4>Add Packages</h4>
-<p>Search for and use JavaScript packages from <a href="https://www.npmjs.com/" target="blank" rel="noopener">npm</a> here. By selecting a package, an <code>import</code> statement will be added to the top of the JavaScript editor for this package.</p>
-<div class="resource-search-bar">
-<svg viewBox="0 0 56.7 56.7" class="icon icon-mag" width="18" height="18">
-<path d="M42.8,7.3C33-2.4,17.1-2.4,7.3,7.3c-9.8,9.8-9.8,25.7,0,35.5c8.7,8.7,22.2,9.7,32,2.9l9.6,9.6c1.8,1.8,4.7,1.8,6.4,0
-c1.8-1.8,1.8-4.7,0-6.4l-9.6-9.6C52.5,29.5,51.5,16,42.8,7.3z M36.6,36.6c-6.4,6.4-16.7,6.4-23.1,0s-6.4-16.7,0-23.1
-c6.4-6.4,16.7-6.4,23.1,0C43,19.9,43,30.3,36.6,36.6z" />
-</svg>
-<input id="packages-search" type="text" value placeholder="Search npm and add a package...">
-</div>
-<div class="algolia-shoutout">
-<a href="https://www.algolia.com/?utm_source=react-instantsearch&utm_medium=website&utm_content=codepen.io&utm_campaign=poweredby" target="_blank">
-Powered by <img alt="Algolia" src="https://cpwebassets.codepen.io/assets/settings/algolia-9e1c0c887f4db420704b2a79926864019ef156bcecc9d5774a7e4eaa731fc5b5.svg" />
-</a>
-</div>
-<div class="help-flyout-link">
-<svg class="icon-help" viewBox="0 0 100 100" width="14" height="14">
-<path d="M75,0H25C11.19,0,0,11.193,0,25v50c0,13.802,11.19,25,25,25h50c13.811,0,25-11.198,25-25V25C100,11.193,88.811,0,75,0z
-   M57.203,85.067H41.504V72.542h15.699V85.067L57.203,85.067z M73.357,42.041c-0.84,2.066-1.873,3.834-3.102,5.298
-  c-1.235,1.474-2.604,2.718-4.101,3.751c-1.498,1.035-2.922,2.066-4.249,3.101c-1.333,1.034-1.553,2.214-2.596,3.547
-  c-1.025,1.335-0.977,3.004-0.977,5.006v3.924H41.668v-4.623c0-2.864,1.366-5.265,2.27-7.202c0.896-1.935,2.255-3.581,3.459-4.947
-  c1.196-1.367,2.62-2.556,3.955-3.557c1.327-0.993,2.637-1.993,3.776-2.995c1.123-1.001,2.083-2.1,2.783-3.304
-  c0.7-1.197,1.043-2.694,0.977-4.5c0-3.06-0.74-5.33-2.245-6.795c-1.498-1.465-3.582-2.206-6.25-2.206c-1.8,0-3.337,0.351-4.639,1.05
-  c-1.303,0.7-2.369,1.635-3.199,2.808c-0.837,1.163-1.448,3.593-1.847,5.156c-0.407,1.57-0.602,6.115-0.602,6.115H25.399
-  c0.073-8.333,0.684-7.963,1.855-10.965c1.164-2.995,2.8-6.132,4.899-8.33c2.099-2.197,4.63-4.179,7.601-5.417
-  c2.962-1.228,6.283-1.977,9.945-1.977c4.736,0,8.683,0.581,11.856,1.876c3.167,1.302,5.713,2.889,7.65,4.817
-  c1.929,1.937,3.312,4.004,4.149,6.234c0.831,2.237,1.245,4.313,1.245,6.242C74.601,37.354,74.187,39.975,73.357,42.041z" />
-</svg>
-<div class="help-flyout help-flyout-reverse">
-<h5>About Packages</h5>
-<svg class="icon-x" viewBox="0 0 100 100" width="12" height="12">
-<path d="M96.8 83.7L63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z" />
-</svg>
-<p>Using packages here is powered by <a href="https://esm.sh/">esm.sh</a>, which makes packages from npm not only available on a CDN, but prepares them for native JavaScript ESM usage.</p>
-<p>All packages are different, so refer to their docs for how they work.</p>
-<p>If you're using React / ReactDOM, make sure to turn on Babel for the JSX processing.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="settings tab-page" id="settings-behavior">
-<h3 aria-label="Pen Behavior">Behavior</h3>
-<div class="settings-row">
-<h4>Auto Save</h4>
-<div>
-<p class="hint">If active, Pens will autosave every 30 seconds after being saved once.</p>
-<div class="ios-toggle-mega-label-wrap">
-<span class="ios-toggle ios-toggle-reverse">
-<input type="checkbox" id="auto-save" name="auto-save" checked>
-<label for="auto-save"></label>
-<label for="auto-save" class="ios-toggle-mega-label"></label>
-</span>
-</div>
-</div>
-</div>
-<div class="settings-row">
-<h4>Auto-Updating Preview</h4>
-<p class="hint">If enabled, the preview panel updates automatically as you code. If disabled, use the "Run" button to update.</p>
-<div class="ios-toggle-mega-label-wrap">
-<span class="ios-toggle ios-toggle-reverse">
-<input type="checkbox" id="auto-run" name="auto-run" checked>
-<label for="auto-run"></label>
-<label for="auto-run" class="ios-toggle-mega-label"></label>
-</span>
-</div>
-</div>
-<div class="settings-row">
-<h4>Format on Save</h4>
-<p class="hint">If enabled, your code will be formatted when you actively save your Pen. <strong><span class="inline-note">Note:</span> your code becomes un-folded during formatting.</strong></p>
-<div class="ios-toggle-mega-label-wrap">
-<span class="ios-toggle ios-toggle-reverse">
-<input type="checkbox" id="format_on_save" name="format_on_save">
-<label for="format_on_save"></label>
-<label for="format_on_save" class="ios-toggle-mega-label"></label>
-</span>
-</div>
-</div>
-</div>
-<div class="settings tab-page" id="settings-editor">
-<h3 aria-label="Editor Settings">Editor Settings</h3>
-<div id="editor-settings-form" class="settings-row top-label-form">
-<h4>
-Code Indentation
-</h4>
-<ul class="radio-list">
-<li>
-<input type="radio" id="indent-with-spaces" name="indent-with" value="spaces" checked>
-<label for="indent-with-spaces" class="small-inline">Spaces</label>
-</li>
-<li>
-<input type="radio" id="indent-with-tabs" name="indent-with" value="tabs">
-<label for="indent-with-tabs" class="small-inline">Tabs</label>
-</li>
-</ul>
-</div>
-<div class="settings-row top-label-form normal-labels">
-<h4>
-<label for="tab-size">
-Code Indent width
-</label>
-</h4>
-<div class="custom-select-wrap">
-<select id="tab-size" class="fullwidth" name="tab-size">
-<option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
-<option value="6">6</option>
-</select>
-<div class="select-icon">
-<svg viewBox="-122.9 121.1 105.9 61.9" class="icon-arrow-down-mini">
-<path d="M-63.2,180.3l43.5-43.5c1.7-1.7,2.7-4,2.7-6.5s-1-4.8-2.7-6.5c-1.7-1.7-4-2.7-6.5-2.7s-4.8,1-6.5,2.7l-37.2,37.2l-37.2-37.2
-        c-1.7-1.7-4-2.7-6.5-2.7s-4.8,1-6.5,2.6c-1.9,1.8-2.8,4.2-2.8,6.6c0,2.3,0.9,4.6,2.6,6.5l0,0c11.4,11.5,41,41.2,43,43.3l0.2,0.2
-        C-73.5,183.9-66.8,183.9-63.2,180.3z" />
-</svg>
-<svg viewBox="-122.9 121.1 105.9 61.9" class="icon-arrow-down-mini">
-<path d="M-63.2,180.3l43.5-43.5c1.7-1.7,2.7-4,2.7-6.5s-1-4.8-2.7-6.5c-1.7-1.7-4-2.7-6.5-2.7s-4.8,1-6.5,2.7l-37.2,37.2l-37.2-37.2
-        c-1.7-1.7-4-2.7-6.5-2.7s-4.8,1-6.5,2.6c-1.9,1.8-2.8,4.2-2.8,6.6c0,2.3,0.9,4.6,2.6,6.5l0,0c11.4,11.5,41,41.2,43,43.3l0.2,0.2
-        C-73.5,183.9-66.8,183.9-63.2,180.3z" />
-</svg>
-</div>
-</div>
-</div>
-<div class="settings-row">
-<h4>Want to change your Syntax Highlighting theme, Fonts and more?</h4>
-<p>Visit <a href="/settings/editor" target="_blank">your global Editor Settings</a>.</p>
-<h4 class="inline-tour">Need a tour of this editor?</h4>
-<p>No problem, here's an <a target="_blank" rel="noreferrer noopener" href="/pen/tour/welcome/start">intro tour</a> and a more <a target="_blank" rel="noreferrer noopener" href="/pen/tour/advanced/start">advanced tour</a>.</p>
-</div>
-</div>
-</div>
-<footer>
-<div class="save-and-close-wrap">
-<input type="button" class="button button-small green button-no-right-margin close" value="Close" id="close-settings">
-</div>
-</footer>
-</div>
-<div class="page-wrap">
-<div class="boxes">
-<div class="mobile-editor-nav">
-<button id="html-toggle" class="selected"><span>HTML</span></button>
-<button id="css-toggle"><span>CSS</span></button>
-<button id="js-toggle"><span>JS</span></button>
-<button id="result-toggle" class="selected"><span>Result</span></button>
-</div>
-<div class="top-boxes editor-parent" data-number-of-editors="3" elementtiming="pen-editors">
-<div class="editor-resizer html-editor-resizer" title="Double-click to expand."></div>
-<div id="box-html" class="box box-html" data-type="html">
-<div class="powers">
-<div class="powers-drag-handle" title="Double-click to expand."></div>
-<div class="editor-actions-left">
-<h2 class="box-title html-editor-title" id="html-editor-title">
-<svg viewBox="0 0 15 15" class="file-type-icon" id="icon-file-html">
-<rect fill="#FF3C41" width="15" height="15" rx="4" />
-<path d="M10.97 2.29a.563.563 0 0 0-.495-.29.572.572 0 0 0-.488.277l-5.905 9.86a.565.565 0 0 0-.007.574c.102.18.287.289.495.289a.572.572 0 0 0 .488-.277l5.905-9.86a.565.565 0 0 0 .007-.574" fill="#28282B" />
-</svg>
-<span class="box-title-name">
-HTML
-</span>
-<span class="box-title-preprocessor-name "></span>
-</h2>
-</div>
-<div class="editor-actions-right">
-<div class="collaborators-indicators"></div>
-<button id="settings-pane-html" class="button button-medium mini-button settings-nub" data-type="html" title="Open HTML Settings">
-<svg viewBox="0 0 100 100" id="icon-gear" width="10" height="10">
-<path d="M87.687,45.077c-0.313-2.433-0.816-4.807-1.542-7.079l8.145-11.73l-5.827-7.515l-0.094-0.123l-5.824-7.514
-                    l-12.955,5.577c-2.041-1.265-4.192-2.362-6.459-3.219L59.42,0h-9.34h-0.153h-9.341l-3.709,13.474
-                    c-2.27,0.857-4.421,1.955-6.463,3.222l-12.957-5.577l-5.825,7.514l-0.097,0.124l-5.822,7.517l8.146,11.731
-                    c-0.726,2.271-1.233,4.645-1.544,7.079L0,52.032l2.08,9.375l0.033,0.15l2.08,9.375l14.001,0.761c1.295,2.028,2.771,3.926,4.4,5.668
-                    l-2.396,14.227l8.416,4.173l0.138,0.067L37.169,100l9.309-10.796c1.161,0.109,2.335,0.173,3.524,0.173s2.358-0.074,3.52-0.184
-                    l9.317,10.804l8.415-4.173l0.141-0.066l8.413-4.172l-2.396-14.228c1.628-1.741,3.104-3.64,4.4-5.672l14-0.759l2.078-9.375
-                    l0.035-0.154L100,52.025L87.687,45.077z M50.003,34.51c8.435,0,15.272,7.035,15.272,15.719c0,8.679-6.839,15.717-15.272,15.717
-                    c-8.436,0-15.272-7.038-15.272-15.717C34.731,41.545,41.569,34.51,50.003,34.51z" />
-</svg>
-</button>
-<button class="button mini-button button-medium editor-dropdown-button editor-dropdown-button-html" data-dropdown="#editor-dropdown-html" aria-haspopup="true" aria-expanded="false">
-<span class="visually-hidden">
-HTML Options
-</span>
-<svg viewBox="-122.9 121.1 105.9 61.9" class="icon-arrow-down-mini" width="10" height="10">
-<path d="M-63.2,180.3l43.5-43.5c1.7-1.7,2.7-4,2.7-6.5s-1-4.8-2.7-6.5c-1.7-1.7-4-2.7-6.5-2.7s-4.8,1-6.5,2.7l-37.2,37.2l-37.2-37.2
-    c-1.7-1.7-4-2.7-6.5-2.7s-4.8,1-6.5,2.6c-1.9,1.8-2.8,4.2-2.8,6.6c0,2.3,0.9,4.6,2.6,6.5l0,0c11.4,11.5,41,41.2,43,43.3l0.2,0.2
-    C-73.5,183.9-66.8,183.9-63.2,180.3z" />
-</svg>
-</button>
-<ul id="editor-dropdown-html" class="link-list is-dropdown editor-dropdown editor-dropdown-html" data-dropdown-position="css" data-dropdown-type="html">
-<li class="editor-dropdown-list-item">
-<button id="tidy-html" class="invisible-button tidy-code-button" data-editor-type="html">
-Format HTML
-</button>
-</li>
-<li class="editor-dropdown-list-item">
-<button id="view-compiled-html" class="invisible-button view-compiled-button" data-editor-type="html">
-View Compiled HTML
-</button>
-</li>
-<li class="editor-dropdown-list-item">
-<button id="analyze-html" class="invisible-button analyze-button" data-editor-type="html">
-Analyze HTML
-</button>
-</li>
-<li class="editor-dropdown-list-item">
-<button id="maximize-html-editor" class="invisible-button maximize-button" data-editor-type="html">
-Maximize HTML Editor
-</button>
-</li>
-<li class="editor-dropdown-list-item">
-<button id="minimize-html-editor" class="invisible-button minimize-button" data-editor-type="html">
-Minimize HTML Editor
-</button>
-</li>
-<li class="editor-dropdown-list-item">
-<button id="fold-all-html" class="invisible-button fold-all-button" data-editor-type="html">
-Fold All
-</button>
-</li>
-<li class="editor-dropdown-list-item">
-<button id="unfold-all-html" class="invisible-button unfold-all-button" data-editor-type="html">
-Unfold All
-</button>
-</li>
-</ul>
-</div>
-</div>
-<div class="code-wrap notranslate" translate="no">
-<pre id="html" class="code-box" aria-labeledby="html-editor-title">
-              <code>
-                &lt;main&gt;
-  &lt;ul class=&#39;slider&#39;&gt;
-    &lt;li class=&#39;item&#39; style=&quot;background-image: url(&#39;https://cdn.mos.cms.futurecdn.net/dP3N4qnEZ4tCTCLq59iysd.jpg&#39;)&quot;&gt;
-      &lt;div class=&#39;content&#39;&gt;
-        &lt;h2 class=&#39;title&#39;&gt;&quot;Lossless Youths&quot;&lt;/h2&gt;
-        &lt;p class=&#39;description&#39;&gt; Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
-        praesentium nisi. Id laboriosam ipsam enim.  &lt;/p&gt;
-        &lt;button&gt;Read More&lt;/button&gt;
-      &lt;/div&gt;
-    &lt;/li&gt;
-    &lt;li class=&#39;item&#39; style=&quot;background-image: url(&#39;https://i.redd.it/tc0aqpv92pn21.jpg&#39;)&quot;&gt;
-      &lt;div class=&#39;content&#39;&gt;
-        &lt;h2 class=&#39;title&#39;&gt;&quot;Estrange Bond&quot;&lt;/h2&gt;
-        &lt;p class=&#39;description&#39;&gt; Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
-        praesentium nisi. Id laboriosam ipsam enim.  &lt;/p&gt;
-        &lt;button&gt;Read More&lt;/button&gt;
-      &lt;/div&gt;
-    &lt;/li&gt;
-    &lt;li class=&#39;item&#39; style=&quot;background-image: url(&#39;https://wharferj.files.wordpress.com/2015/11/bio_north.jpg&#39;)&quot;&gt;
-      &lt;div class=&#39;content&#39;&gt;
-        &lt;h2 class=&#39;title&#39;&gt;&quot;The Gate Keeper&quot;&lt;/h2&gt;
-        &lt;p class=&#39;description&#39;&gt; Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
-        praesentium nisi. Id laboriosam ipsam enim.  &lt;/p&gt;
-        &lt;button&gt;Read More&lt;/button&gt;
-      &lt;/div&gt;
-    &lt;/li&gt;
-    &lt;li class=&#39;item&#39; style=&quot;background-image: url(&#39;https://images7.alphacoders.com/878/878663.jpg&#39;)&quot;&gt;
-      &lt;div class=&#39;content&#39;&gt;
-        &lt;h2 class=&#39;title&#39;&gt;&quot;Last Trace Of Us&quot;&lt;/h2&gt;
-        &lt;p class=&#39;description&#39;&gt;
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.
-        &lt;/p&gt;
-        &lt;button&gt;Read More&lt;/button&gt;
-      &lt;/div&gt;
-    &lt;/li&gt;
-    &lt;li class=&#39;item&#39; style=&quot;background-image: url(&#39;https://theawesomer.com/photos/2017/07/simon_stalenhag_the_electric_state_6.jpg&#39;)&quot;&gt;
-      &lt;div class=&#39;content&#39;&gt;
-        &lt;h2 class=&#39;title&#39;&gt;&quot;Urban Decay&quot;&lt;/h2&gt;
-        &lt;p class=&#39;description&#39;&gt;
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.
-        &lt;/p&gt;
-        &lt;button&gt;Read More&lt;/button&gt;
-      &lt;/div&gt;
-    &lt;/li&gt;
-    &lt;li class=&#39;item&#39; style=&quot;background-image: url(&#39;https://da.se/app/uploads/2015/09/simon-december1994.jpg&#39;)&quot;&gt;
-      &lt;div class=&#39;content&#39;&gt;
-        &lt;h2 class=&#39;title&#39;&gt;&quot;The Migration&quot;&lt;/h2&gt;
-        &lt;p class=&#39;description&#39;&gt; Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
-        praesentium nisi. Id laboriosam ipsam enim.  &lt;/p&gt;
-        &lt;button&gt;Read More&lt;/button&gt;
-      &lt;/div&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-  &lt;nav class=&#39;nav&#39;&gt;
-    &lt;ion-icon class=&#39;btn prev&#39; name=&quot;arrow-back-outline&quot;&gt;&lt;/ion-icon&gt;
-    &lt;ion-icon class=&#39;btn next&#39; name=&quot;arrow-forward-outline&quot;&gt;&lt;/ion-icon&gt;
-  &lt;/nav&gt;
-&lt;/main&gt;
+ 
 
-&lt;script type=&quot;module&quot; src=&quot;https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js&quot;&gt;&lt;/script&gt;
-&lt;script nomodule src=&quot;https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js&quot;&gt;&lt;/script&gt;
-              </code>
-            </pre>
-<div class="error-bar" id="error-bar-html">
-<span class="error-icon" data-type="html">
-!
-</span>
-</div>
-<span class="code-editor-status"></span>
-</div>
-</div>
-<div class="editor-resizer css-editor-resizer" title="Double-click to expand."></div>
-<div id="box-css" class="box box-css" data-type="css">
-<div class="powers">
-<div class="powers-drag-handle" title="Double-click to expand."></div>
-<div class="editor-actions-left">
-<h2 class="box-title css-editor-title" id="css-editor-title">
-<svg viewBox="0 0 15 15" class="file-type-icon" id="icon-file-css">
-<rect fill="#0EBEFF" width="15" height="15" rx="4" /><path d="M8 8.366l1.845 1.065a.507.507 0 0 0 .686-.181.507.507 0 0 0-.186-.685L8.5 7.5l1.845-1.065a.507.507 0 0 0 .186-.685.507.507 0 0 0-.686-.181L8 6.634v-2.13A.507.507 0 0 0 7.5 4c-.268 0-.5.225-.5.503v2.131L5.155 5.569a.507.507 0 0 0-.686.181.507.507 0 0 0 .186.685L6.5 7.5 4.655 8.565a.507.507 0 0 0-.186.685c.134.232.445.32.686.181L7 8.366v2.13c0 .271.224.504.5.504.268 0 .5-.225.5-.503V8.366z" fill="#282828" />
-</svg>
-<span class="box-title-name">
-CSS
-</span>
-<span class="box-title-preprocessor-name "></span>
-</h2>
-</div>
-<div class="editor-actions-right">
-<div class="collaborators-indicators"></div>
-<button id="settings-pane-css" class="button button-medium mini-button settings-nub" data-type="css" title="Open CSS Settings">
-<svg viewBox="0 0 100 100" id="icon-gear" width="10" height="10">
-<path d="M87.687,45.077c-0.313-2.433-0.816-4.807-1.542-7.079l8.145-11.73l-5.827-7.515l-0.094-0.123l-5.824-7.514
-                    l-12.955,5.577c-2.041-1.265-4.192-2.362-6.459-3.219L59.42,0h-9.34h-0.153h-9.341l-3.709,13.474
-                    c-2.27,0.857-4.421,1.955-6.463,3.222l-12.957-5.577l-5.825,7.514l-0.097,0.124l-5.822,7.517l8.146,11.731
-                    c-0.726,2.271-1.233,4.645-1.544,7.079L0,52.032l2.08,9.375l0.033,0.15l2.08,9.375l14.001,0.761c1.295,2.028,2.771,3.926,4.4,5.668
-                    l-2.396,14.227l8.416,4.173l0.138,0.067L37.169,100l9.309-10.796c1.161,0.109,2.335,0.173,3.524,0.173s2.358-0.074,3.52-0.184
-                    l9.317,10.804l8.415-4.173l0.141-0.066l8.413-4.172l-2.396-14.228c1.628-1.741,3.104-3.64,4.4-5.672l14-0.759l2.078-9.375
-                    l0.035-0.154L100,52.025L87.687,45.077z M50.003,34.51c8.435,0,15.272,7.035,15.272,15.719c0,8.679-6.839,15.717-15.272,15.717
-                    c-8.436,0-15.272-7.038-15.272-15.717C34.731,41.545,41.569,34.51,50.003,34.51z" />
-</svg>
-</button>
-<button class="button mini-button button-medium editor-dropdown-button editor-dropdown-button-css" data-dropdown="#editor-dropdown-css" aria-haspopup="true" aria-expanded="false">
-<span class="visually-hidden">
-CSS Options
-</span>
-<svg viewBox="-122.9 121.1 105.9 61.9" class="icon-arrow-down-mini" width="10" height="10">
-<path d="M-63.2,180.3l43.5-43.5c1.7-1.7,2.7-4,2.7-6.5s-1-4.8-2.7-6.5c-1.7-1.7-4-2.7-6.5-2.7s-4.8,1-6.5,2.7l-37.2,37.2l-37.2-37.2
-    c-1.7-1.7-4-2.7-6.5-2.7s-4.8,1-6.5,2.6c-1.9,1.8-2.8,4.2-2.8,6.6c0,2.3,0.9,4.6,2.6,6.5l0,0c11.4,11.5,41,41.2,43,43.3l0.2,0.2
-    C-73.5,183.9-66.8,183.9-63.2,180.3z" />
-</svg>
-</button>
-<ul id="editor-dropdown-css" class="link-list is-dropdown editor-dropdown editor-dropdown-css" data-dropdown-position="css" data-dropdown-type="css">
-<li class="editor-dropdown-list-item">
-<button id="tidy-css" class="invisible-button tidy-code-button" data-editor-type="css">
-Format CSS
-</button>
-</li>
-<li class="editor-dropdown-list-item">
-<button id="view-compiled-css" class="invisible-button view-compiled-button" data-editor-type="css">
-View Compiled CSS
-</button>
-</li>
-<li class="editor-dropdown-list-item">
-<button id="analyze-css" class="invisible-button analyze-button" data-editor-type="css">
-Analyze CSS
-</button>
-</li>
-<li class="editor-dropdown-list-item">
-<button id="maximize-css-editor" class="invisible-button maximize-button" data-editor-type="css">
-Maximize CSS Editor
-</button>
-</li>
-<li class="editor-dropdown-list-item">
-<button id="minimize-css-editor" class="invisible-button minimize-button" data-editor-type="css">
-Minimize CSS Editor
-</button>
-</li>
-<li class="editor-dropdown-list-item">
-<button id="fold-all-css" class="invisible-button fold-all-button" data-editor-type="css">
-Fold All
-</button>
-</li>
-<li class="editor-dropdown-list-item">
-<button id="unfold-all-css" class="invisible-button unfold-all-button" data-editor-type="css">
-Unfold All
-</button>
-</li>
-</ul>
-</div>
-</div>
-<div class="code-wrap notranslate" translate="no">
-<pre id="css" class="code-box" aria-labeledby="css-editor-title">
-              <code>
-                * {
+
+
+
+<style>
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -1049,7 +107,7 @@ main {
   box-shadow: 0 20px 30px rgba(255,255,255,0.3) inset;
   transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s;
 
-  &amp;:nth-child(1), &amp;:nth-child(2) {
+  &:nth-child(1), &:nth-child(2) {
     left: 0;
     top: 0;
     width: 100%;
@@ -1059,11 +117,12 @@ main {
     box-shadow: none;
     opacity: 1;
   }
+  
 
-  &amp;:nth-child(3) { left: 50%; }
-  &amp;:nth-child(4) { left: calc(50% + 220px); }
-  &amp;:nth-child(5) { left: calc(50% + 440px); }
-  &amp;:nth-child(6) { left: calc(50% + 660px); opacity: 0; }
+  &:nth-child(3) { left: 50%; }
+  &:nth-child(4) { left: calc(50% + 220px); }
+  &:nth-child(5) { left: calc(50% + 440px); }
+  &:nth-child(6) { left: calc(50% + 660px); opacity: 0; }
 }
 
 .content {
@@ -1078,18 +137,18 @@ main {
   opacity: 0;
   display: none;
 
-  &amp; .title {
-    font-family: &#39;arial-black&#39;;
+  & .title {
+    font-family: 'arial-black';
     text-transform: uppercase;
   }
 
-  &amp; .description {
+  & .description {
     line-height: 1.7;
     margin: 1rem 0 1.5rem;
     font-size: 0.8rem;
   }
 
-  &amp; button {
+  & button {
     width: fit-content;
     background-color: rgba(0,0,0,0.1);
     color: white;
@@ -1124,7 +183,7 @@ main {
   z-index: 5;
   user-select: none;
 
-  &amp; .btn {
+  & .btn {
     background-color: rgba(255,255,255,0.5);
     color: rgba(0,0,0,0.7);
     border: 2px solid rgba(0,0,0,0.6);
@@ -1133,460 +192,71 @@ main {
     border-radius: 50%;
     cursor: pointer;
 
-    &amp;:hover {
+    &:hover {
       background-color: rgba(255,255,255,0.3);
     }
   }
 }
 
-@media (width &gt; 650px) and (width &lt; 900px) {
+@media (width > 650px) and (width < 900px) {
   .content {
-    &amp; .title        { font-size: 1rem; }
-    &amp; .description  { font-size: 0.7rem; }
-    &amp; button        { font-size: 0.7rem; }
+    & .title        { font-size: 1rem; }
+    & .description  { font-size: 0.7rem; }
+    & button        { font-size: 0.7rem; }
   }
   .item {
     width: 160px;
     height: 270px;
 
-    &amp;:nth-child(3) { left: 50%; }
-    &amp;:nth-child(4) { left: calc(50% + 170px); }
-    &amp;:nth-child(5) { left: calc(50% + 340px); }
-    &amp;:nth-child(6) { left: calc(50% + 510px); opacity: 0; }
+    &:nth-child(3) { left: 50%; }
+    &:nth-child(4) { left: calc(50% + 170px); }
+    &:nth-child(5) { left: calc(50% + 340px); }
+    &:nth-child(6) { left: calc(50% + 510px); opacity: 0; }
   }
 }
 
-@media (width &lt; 650px) {
+@media (width < 650px) {
   .content {
-    &amp; .title        { font-size: 0.9rem; }
-    &amp; .description  { font-size: 0.65rem; }
-    &amp; button        { font-size: 0.7rem; }
+    & .title        { font-size: 0.9rem; }
+    & .description  { font-size: 0.65rem; }
+    & button        { font-size: 0.7rem; }
   }
   .item {
     width: 130px;
     height: 220px;
 
-    &amp;:nth-child(3) { left: 50%; }
-    &amp;:nth-child(4) { left: calc(50% + 140px); }
-    &amp;:nth-child(5) { left: calc(50% + 280px); }
-    &amp;:nth-child(6) { left: calc(50% + 420px); opacity: 0; }
+    &:nth-child(3) { left: 50%; }
+    &:nth-child(4) { left: calc(50% + 140px); }
+    &:nth-child(5) { left: calc(50% + 280px); }
+    &:nth-child(6) { left: calc(50% + 420px); opacity: 0; }
   }
 }
-              </code>
-            </pre>
-<div class="error-bar" id="error-bar-css">
-<span class="error-icon" data-type="css">
-!
-</span>
-</div>
-<span class="code-editor-status"></span>
-</div>
-</div>
-<div class="editor-resizer js-editor-resizer" title="Double-click to expand."></div>
-<div id="box-js" class="box box-js" data-type="js">
-<div class="powers">
-<div class="powers-drag-handle" title="Double-click to expand."></div>
-<div class="editor-actions-left">
-<h2 class="box-title js-editor-title" id="js-editor-title">
-<svg viewBox="0 0 15 15" class="file-type-icon" id="icon-file-js">
-<rect fill="#FCD000" width="15" height="15" rx="4" />
-<path d="M6.554 3.705c0 .267-.19.496-.452.543-1.2.217-2.12 1.61-2.12 3.275 0 1.665.92 3.057 2.12 3.274a.554.554 0 0 1-.205 1.087c-1.733-.322-3.022-2.175-3.022-4.361 0-2.187 1.289-4.04 3.022-4.362a.554.554 0 0 1 .657.544zm1.892 0c0-.347.316-.607.657-.544 1.733.322 3.022 2.175 3.022 4.362 0 2.186-1.289 4.04-3.022 4.361a.554.554 0 0 1-.205-1.087c1.2-.217 2.12-1.61 2.12-3.274 0-1.665-.92-3.058-2.12-3.275a.551.551 0 0 1-.452-.543z" fill="#282828" />
-</svg>
-<span class="box-title-name">
-JS
-</span>
-<span class="box-title-preprocessor-name "></span>
-</h2>
-</div>
-<div class="editor-actions-right">
-<div class="collaborators-indicators"></div>
-<button id="settings-pane-js" class="button button-medium mini-button settings-nub" data-type="js" title="Open JS Settings">
-<svg viewBox="0 0 100 100" id="icon-gear" width="10" height="10">
-<path d="M87.687,45.077c-0.313-2.433-0.816-4.807-1.542-7.079l8.145-11.73l-5.827-7.515l-0.094-0.123l-5.824-7.514
-                    l-12.955,5.577c-2.041-1.265-4.192-2.362-6.459-3.219L59.42,0h-9.34h-0.153h-9.341l-3.709,13.474
-                    c-2.27,0.857-4.421,1.955-6.463,3.222l-12.957-5.577l-5.825,7.514l-0.097,0.124l-5.822,7.517l8.146,11.731
-                    c-0.726,2.271-1.233,4.645-1.544,7.079L0,52.032l2.08,9.375l0.033,0.15l2.08,9.375l14.001,0.761c1.295,2.028,2.771,3.926,4.4,5.668
-                    l-2.396,14.227l8.416,4.173l0.138,0.067L37.169,100l9.309-10.796c1.161,0.109,2.335,0.173,3.524,0.173s2.358-0.074,3.52-0.184
-                    l9.317,10.804l8.415-4.173l0.141-0.066l8.413-4.172l-2.396-14.228c1.628-1.741,3.104-3.64,4.4-5.672l14-0.759l2.078-9.375
-                    l0.035-0.154L100,52.025L87.687,45.077z M50.003,34.51c8.435,0,15.272,7.035,15.272,15.719c0,8.679-6.839,15.717-15.272,15.717
-                    c-8.436,0-15.272-7.038-15.272-15.717C34.731,41.545,41.569,34.51,50.003,34.51z" />
-</svg>
-</button>
-<button class="button mini-button button-medium editor-dropdown-button editor-dropdown-button-js" data-dropdown="#editor-dropdown-js" aria-haspopup="true" aria-expanded="false">
-<span class="visually-hidden">
-JS Options
-</span>
-<svg viewBox="-122.9 121.1 105.9 61.9" class="icon-arrow-down-mini" width="10" height="10">
-<path d="M-63.2,180.3l43.5-43.5c1.7-1.7,2.7-4,2.7-6.5s-1-4.8-2.7-6.5c-1.7-1.7-4-2.7-6.5-2.7s-4.8,1-6.5,2.7l-37.2,37.2l-37.2-37.2
-    c-1.7-1.7-4-2.7-6.5-2.7s-4.8,1-6.5,2.6c-1.9,1.8-2.8,4.2-2.8,6.6c0,2.3,0.9,4.6,2.6,6.5l0,0c11.4,11.5,41,41.2,43,43.3l0.2,0.2
-    C-73.5,183.9-66.8,183.9-63.2,180.3z" />
-</svg>
-</button>
-<ul id="editor-dropdown-js" class="link-list is-dropdown editor-dropdown editor-dropdown-js" data-dropdown-position="css" data-dropdown-type="js">
-<li class="editor-dropdown-list-item">
-<button id="tidy-js" class="invisible-button tidy-code-button" data-editor-type="js">
-Format JavaScript
-</button>
-</li>
-<li class="editor-dropdown-list-item">
-<button id="view-compiled-js" class="invisible-button view-compiled-button" data-editor-type="js">
-View Compiled JavaScript
-</button>
-</li>
-<li class="editor-dropdown-list-item">
-<button id="analyze-js" class="invisible-button analyze-button" data-editor-type="js">
-Analyze JavaScript
-</button>
-</li>
-<li class="editor-dropdown-list-item">
-<button id="maximize-js-editor" class="invisible-button maximize-button" data-editor-type="js">
-Maximize JavaScript Editor
-</button>
-</li>
-<li class="editor-dropdown-list-item">
-<button id="minimize-js-editor" class="invisible-button minimize-button" data-editor-type="js">
-Minimize JavaScript Editor
-</button>
-</li>
-<li class="editor-dropdown-list-item">
-<button id="fold-all-js" class="invisible-button fold-all-button" data-editor-type="js">
-Fold All
-</button>
-</li>
-<li class="editor-dropdown-list-item">
-<button id="unfold-all-js" class="invisible-button unfold-all-button" data-editor-type="js">
-Unfold All
-</button>
-</li>
-</ul>
-</div>
-</div>
-<div class="code-wrap notranslate" translate="no">
-<pre id="js" class="code-box" aria-labeledby="js-editor-title">
-              <code>
-                const slider = document.querySelector(&#39;.slider&#39;);
-
-function activate(e) {
-  const items = document.querySelectorAll(&#39;.item&#39;);
-  e.target.matches(&#39;.next&#39;) &amp;&amp; slider.append(items[0])
-  e.target.matches(&#39;.prev&#39;) &amp;&amp; slider.prepend(items[items.length-1]);
+@media (pointer: fine) {
+  .cursor {
+    display: block;
+  }
 }
 
-document.addEventListener(&#39;click&#39;,activate,false);
-              </code>
-            </pre>
-<div class="error-bar" id="error-bar-js">
-<span class="error-icon" data-type="js">
-!
-</span>
-</div>
-<span class="code-editor-status"></span>
-</div>
-<div class="react-pen-editor-imports" data-props-type="js"></div>
-</div>
-</div>
-<div id="resizer" class="resizer">
-<span></span>
-<div id="width-readout" class="width-readout">999px</div>
-<div id="pen-ad"></div>
-</div>
-<section id="drawer" class="comments">
-</section>
-<div class="output-container">
-<div class="output-sizer">
-<div id="result_div" class="result">
-<iframe id="result" name="CodePen" title="CodePen Preview" src="https://cdpn.io/noirsociety/fullpage/ZEwLGXB?view=" sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-downloads allow-presentation" allow="accelerometer; ambient-light-sensor; camera; display-capture; encrypted-media; geolocation; gyroscope; microphone; midi; payment; vr; web-share" scrolling="auto" allowTransparency="true" allowpaymentrequest="true" allowfullscreen="true" class="result-iframe " loading="lazy">
-          </iframe>
-<div id="editor-drag-cover" class="drag-cover"></div>
-</div>
-<div id="box-console" class="box box-console notranslate" translate="no">
-<div class="editor-resizer editor-resizer-console" title="Drag to resize. Double-click to expand."></div>
-<div class="powers">
-<div class="powers-drag-handle" title="Drag to resize. Double-click to expand."></div>
-<div class="editor-actions-left">
-<h2 class="box-title"><span class="box-title-name">Console</span></h2>
-</div>
-<div class="editor-actions-right">
-<button class="button button-medium mini-button console-clear-button" title="Clear">
-Clear
-</button>
-<button class="button button-medium mini-button close-editor-button" data-type="console" title="Close">
-<svg class="icon-x" viewBox="0 0 100 100">
-<path d="M96.8 83.7L63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z" />
-</svg>
-</button>
-</div>
-</div>
-<div class="console-wrap">
-<div class="console-entries short-no-scroll"></div>
-<div class="console-command-line">
-<span class="console-arrow forwards"></span>
-<textarea class="console-command-line-input auto-expand" rows="1" data-min-rows="1"></textarea>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="asset-bin-goes-here"></div>
-<footer id="react-pen-footer" class="site-footer editor-footer"></footer>
-<div id="keycommands" class="modal modal-neutral">
-<div class="keycommands-container">
-<section class="editor-commands inline-editor-commands">
-<h2>Editor Commands</h2>
-<div class="key-group">
-<kbd class="keycommand">
-<span class="key pc_only">Ctrl</span>
-<span class="key mac_only">Ctrl</span>
-<span class="key">Space</span>
-</kbd>
-Autocomplete
-</div>
-<div class="key-group">
-<kbd class="keycommand">
-<span class="key -command"></span>
-<span class="key">F</span>
-</kbd>
-Find
-</div>
-<div class="key-group">
-<kbd class="keycommand">
-<span class="key -command"></span>
-<span class="key">G</span>
-</kbd>
-Find Next
-</div>
-<div class="key-group">
-<kbd class="keycommand">
-<span class="key -command"></span>
-<span class="key" title="Shift">⇧</span>
-<span class="key">G</span>
-</kbd>
-Find Previous
-</div>
-<div class="key-group">
-<kbd class="keycommand">
-<span class="key -command"></span>
-<span class="key pc_only" title="Shift">⇧</span>
-<span class="key mac_only">Opt</span>
-<span class="key">F</span>
-</kbd>
-Find & Replace
-</div>
-<div class="key-group mac_only">
-<kbd class="keycommand">
-<span class="key -command"></span>
-<span class="key" title="Shift">⇧</span>
-<span class="key">F</span>
-</kbd>
-Format Code
-</div>
-<div class="key-group">
-<kbd class="keycommand">
-<span class="key -command"></span>
-<span class="key">[</span>
-</kbd>
-Indent Code Right
-</div>
-<div class="key-group">
-<kbd class="keycommand">
-<span class="key -command"></span>
-<span class="key">]</span>
-</kbd>
-Indent Code Left
-</div>
-<div class="key-group">
-<kbd class="keycommand">
-<span class="key" title="Shift">⇧</span>
-<span class="key">Tab</span>
-</kbd>
-Auto Indent Code
-</div>
-<div class="key-group">
-<kbd class="keycommand">
-<span class="key -command"></span>
-<span class="key">/</span>
-</kbd>
-Line Comment
-</div>
-<div class="key-group">
-<kbd class="keycommand">
-<span class="key -command"></span>
-<span class="key pc_only" title="Shift">⇧</span>
-<span class="key mac_only">Opt</span>
-<span class="key">/</span>
-</kbd>
-Block Comment
-</div>
-<p class="inline-tab-triggers">Also see: <a href="https://blog.codepen.io/documentation/features/tab-triggers/" target="_blank" rel="noopener">Tab Triggers</a></p>
-</section>
-<section class="editor-commands">
-<h2>Editor Focus</h2>
-<div class="key-group">
-<kbd class="keycommand">
-<span class="key -command"></span>
-<span class="key pc_only">Alt</span>
-<span class="key mac_only">Opt</span>
-<span class="key">1</span>
-</kbd>
-HTML Editor
-</div>
-<div class="key-group">
-<kbd class="keycommand">
-<span class="key -command"></span>
-<span class="key pc_only">Alt</span>
-<span class="key mac_only">Opt</span>
-<span class="key">2</span>
-</kbd>
-CSS Editor
-</div>
-<div class="key-group">
-<kbd class="keycommand">
-<span class="key -command"></span>
-<span class="key pc_only">Alt</span>
-<span class="key mac_only">Opt</span>
-<span class="key">3</span>
-</kbd>
-JS Editor
-</div>
-<div class="key-group">
-<kbd class="keycommand">
-<span class="key -command"></span>
-<span class="key pc_only">Alt</span>
-<span class="key mac_only">Opt</span>
-<span class="key">4</span>
-</kbd>
-Toggle Console
-</div>
-<div class="key-group">
-<kbd class="keycommand">
-<span class="key -command"></span>
-<span class="key pc_only">Alt</span>
-<span class="key mac_only">Opt</span>
-<span class="key">0</span>
-</kbd>
-Preview
-</div>
-<div class="key-group">
-<kbd class="keycommand">
-<span class="key">Esc</span>
-</kbd>
-Exit currently focused editor
-</div>
-</section>
-<section class="editor-commands">
-<h2>Misc</h2>
-<div class="key-group">
-<kbd class="keycommand">
-<span class="key -command"></span>
-<span class="key" title="Shift">⇧</span>
-<span class="key">7</span>
-</kbd>
-Re-run Preview
-</div>
-<div class="key-group">
-<kbd class="keycommand">
-<span class="key -command"></span>
-<span class="key" title="Shift">⇧</span>
-<span class="key">8</span>
-</kbd>
-Clear All Analyze Errors
-</div>
-<div class="key-group">
-<kbd class="keycommand">
-<span class="key -command"></span>
-<span class="key" title="Shift">⇧</span>
-<span class="key">9</span>
-</kbd>
-Open This Dialog
-</div>
-<div class="key-group">
-<kbd class="keycommand">
-<span class="key -command"></span>
-<span class="key" title="Shift">⇧</span>
-<span class="key">0</span>
-</kbd>
-Open Debug View
-</div>
-<h2>HTML Specific</h2>
-<div class="key-group">
-<kbd class="keycommand">
-<span class="key -command"></span>
-<span class="key" title="Shift">⇧</span>
-<span class="key">A</span>
-</kbd>
-Wrap With...
-</div>
-<h2>Pen Actions</h2>
-<div class="key-group">
-<kbd class="keycommand">
-<span class="key -command"></span>
-<span class="key">P</span>
-</kbd>
-Create New Pen
-</div>
-<div class="key-group">
-<kbd class="keycommand">
-<span class="key -command"></span>
-<span class="key">S</span>
-</kbd>
-Save
-</div>
-<div class="key-group">
-<kbd class="keycommand">
-<span class="key -command"></span>
-<span class="key" title="Shift">⇧</span>
-<span class="key">S</span>
-</kbd>
-Save As Private <span style="border-radius: 2px; padding: 1px 6px 2px 5px; color: black !important; background: var(--cp-color-yellow); white-space: nowrap; text-shadow: none; letter-spacing: 0; font-size: 71%; position: relative; top: -1px;">PRO</span>
-</div>
-<div class="key-group">
-<kbd class="keycommand">
-<span class="key -command"></span>
-<span class="key">I</span>
-</kbd>
-Info Panel (if owned)
-</div>
-</section>
-</div>
-</div>
-<div id="popup-overlay" class="overlay popup-overlay"></div>
-<div id="modal-overlay" class="overlay modal-overlay"></div>
-<noscript>
+.cursor2 {
+  --size: 2px;
+  transition-duration: 0.7s;
+}
 
-  <input type="checkbox" class="modal-closing-trick" id="modal-closing-trick">
+@font-face {
+  font-family: "Orelo-sw-db";
+  src: url(data:font/truetype;charset=utf-8;base64,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KAIrAjICOQJGAkwCUgJZAl8CZgJuAnICeAJ/AoYCkwKaAqECpwKsArcCwALGAtEC1wLdAucC7ALxAvYDAgMIAxADGgMkAy4DNgM9A0gDUwNeA2IDagN2A38DiAOPA5gDnwOmA60DtAO7A8IDyQPSA9kD4APnA+4D9QP8BAgEEwQfBCsEMQRBBEcEUgRdBGMEbwSqBMEEyUFicmV2ZUFtYWNyb25Bb2dvbmVrQ2FjdXRlQ2Nhcm9uQ2RvdGFjY2VudERjYXJvbkRjcm9hdEVjYXJvbkVkb3RhY2NlbnRFbWFjcm9uRW9nb25la0dkb3RhY2NlbnRHYnJldmV1bmkwMTIySGJhcklkb3RhY2NlbnRJbWFjcm9uSW9nb25la3VuaTAxMzZMYWN1dGV1bmkwMTNCTGNhcm9uTGRvdE5jYXJvbk5hY3V0ZXVuaTAxNDVFbmdPbWFjcm9uT2h1bmdhcnVtbGF1dFJhY3V0ZVJjYXJvbnVuaTAxNTZTYWN1dGVUYmFyU2NlZGlsbGF1bmkwMjE4VGNhcm9udW5pMDE2MnVuaTAyMUFVbWFjcm9uVWh1bmdhcnVtbGF1dFVvZ29uZWtVcmluZ1dhY3V0ZVdjaXJjdW1mbGV4V2dyYXZlV2RpZXJlc2lzWWNpcmN1bWZsZXhZZ3JhdmVaYWN1dGVaZG90YWNjZW50YWJyZXZlYW1hY3JvbmFvZ29uZWtjYWN1dGVjY2Fyb25jZG90YWNjZW50ZGNhcm9uZGNyb2F0ZWNhcm9uZWRvdGFjY2VudGVtYWNyb25lb2dvbmVrZ2JyZXZldW5pMDEyM2hiYXJnZG90YWNjZW50aW1hY3JvbmkubG9jbFRSS2lvZ29uZWt1bmkwMjM3bGFjdXRldW5pMDEzN3VuaTAxM0NsY2Fyb25sZG90bmFjdXRlbmNhcm9uZW5ndW5pMDE0Nm9tYWNyb25vaHVuZ2FydW1sYXV0cmFjdXRlcmNhcm9udW5pMDE1N3NhY3V0ZXVuaTAyMTlzY2VkaWxsYXRiYXJ0Y2Fyb251bmkwMjFCdW5pMDE2M3VodW5nYXJ1bWxhdXR1bWFjcm9udW9nb25la3dhY3V0ZXVyaW5nd2NpcmN1bWZsZXh3ZGllcmVzaXN3Z3JhdmV5Y2lyY3VtZmxleHlncmF2ZXphY3V0ZXpkb3RhY2NlbnR3LjAwMWwu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CTQJOguYC5gLmAk0CToLmAuYC5gJNAk6C5gLmAuYCTQJOguYC5gLmAlACUYLmAuYC5gLmAlSCUwLmAuYC5gJUglMC5gLmAuYCVIJTAuYC5gLmAlSCUwLmAuYC5gJUglMC5gLmAuYCV4LmAlYC5gLmAleC5gJWAuYC5gJXguYCVgLmAuYCV4LmAlYC5gJZAlqC5gLmAuYCWQJaguYC5gLmAlkCWoLmAuYC5gJZAlqC5gLmAuYCWQJaguYC5gLmAlkCWoLmAuYC5gJZAlqC5gLmAuYCWQJaguYC5gLmAlkCWoLmAuYC5gLmAl2CXALmAuYC5gJdglwC5gLmAuYCXYJcAuYC5gLmAl2CXALmAuYC5gJgguYCXwLmAuYCYILmAl8C5gJiAmOC5gLmAuYCYgJjguYC5gLmAmICY4LmAuYC5gJiAmOC5gLmAuYCYgJjguYC5gLmAmICY4LmAuYC5gJiAmOC5gLmAuYCYgJjguYC5gLmAuYCZQLmAuYC5gLmAmgCZoLmAuYC5gJoAmaC5gLmAuYCbIJpgmsC5gLmAmyCaYJrAuYC5gJsgmmCawLmAuYCbIJpgmsC5gLmAmyCaYJrAm4C5gJsgmmCawLmAuYCb4LmAuYC5gLmAnKCcQLmAuYC5gJygnEC5gLmAuYCcoJxAuYC5gLmAnKCcQLmAuYC5gJygnEC5gLmAuYCdYLmAnQC5gLmAnWC5gJ0AuYC5gJ1guYCdALmAuYCdYLmAnQC5gLmAnWC5gJ0AuYC5gJ1guYCdALmAuYCdYLmAnQC5gLmAnWC5gJ0AuYC5gJ1guYCdALmAncCeILmAuYC5gLmAnWC5gJ0AuYC5gJ7gnoC5gLmAuYCe4J6AuYC5gLmAnuCegLmAuYC5gJ7gnoC5gLmAuYCfoJ9AuYC5gLmAn6CfQLmAuYC5gJ+gn0C5gLmAuYCfoJ9AuYC5gLmAn6CfQLmAuYC5gKDAoACgYLmAuYCgwKAAoGC5gLmAoMCgAKBguYC5gKDAoACgYLmAuYCgwKAAoGC5gKEgnuC5gLmAuYChIJ7guYC5gLmAoSCe4LmAuYC5gKEgnuC5gLmAuYChIJ7guYC5gLmAoSCe4LmAuYC5gKEgnuC5gLmAuYChIJ7guYC5gLmAoSCe4LmAuYC5gLmAoYC5gLmAuYC5gKGAuYC5gLmAuYChgLmAuYC5gLmAoYC5gLmAuYC5gKGAuYC5gLmAuYCh4LmAuYC5gLmAoeC5gLmAuYC5gKHguYC5gLmAuYCh4LmAuYC5gLmAoeC5gLmAuYC5gKJAuYC5gLmAuYCiQLmAuYC5gLmAokC5gLmAuYC5gKJAuYC5gLmAuYCjAKKguYC5gLmAowCioLmAuYC5gKMAoqC5gLmAuYCjAKKguYC5gKNgo8C5gLmAuYCjYKPAuYC5gLmAo2CjwLmAuYC5gKNgo8C5gLmAuYCjYKPAuYC5gLmAo2CjwLmAuYC5gKNgo8C5gLmAuYCjYKPAuYC5gLmAo2CjwLmAuYC5gKNgo8C5gLmAuYCkIKSAuYC5gLmAuYClQKTguYC5gLmApUCk4LmAuYC5gKVApOC5gLmAuYClQKTguYC5gLmApUCk4LmAuYC5gKYAuYCloLmAuYCmALmApaC5gLmApgC5gKWguYCmYKbAuYC5gLmApmCmwLmAuYC5gKZgpsC5gLmAuYCmYKbAuYC5gLmApmCmwLmAuYC5gKZgpsC5gLmAuYCmYKbAuYC5gLmApmCmwLmAuYC5gKZgpsC5gLmAuYC5gKcguYC5gLmAuYCngLmAuYC5gLmAp4C5gLmAuYC5gKeAuYC5gLmAuYCpAKhAqKCn4LmAqQCoQKigp+CqIKqAqcC5gKlgq6CsAKtAuYCq4LmArGC5gLmAuYC5gKxguYC5gLmAuYCsYLmAuYC5gKugrACrQLmAquC5gKxguYC5gLmAq6CsAKtAuYCq4KogqoCpwLmAqWC5gK0guYC5gKzAuYCtILmAuYCswLmAreCtgLmAuYC5gK3grYC5gLmAuYCuQKhAqKCn4LmArkCoQKigp+C5gK5AqECooKfguYCuQKhAqKCn4LmArkCoQKigrqC5gK5AqECooKfgq6CvAKtAuYCq4KugsCCvwLmAr2CroLAgr8C5gK9gq6CwIK/AuYCvYKugsCCvwLmAr2CroLCAr8C5gK9gq6CwIK/AuYCvYLmAsUC5gLDguYC5gLFAuYCw4LmAuYCxQLmAsOC5gLmAsUC5gLDguYC5gLFAuYCw4LmAuYCxQLmAsOC5gLmAsUC5gLDguYC5gLFAuYCw4LmAuYCxQLmAsOC5gLGgsgC5gLmAuYC5gLJguYC5gLmAuYCyYKhAqKCn4KugsyCywLmAquCroLMgssC5gKrgq6CzILLAuYCq4KugsyCywLmAqu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AC0AzQDRABIA0gDaABMA2wDgABQA4QDhAB8A4gDmABQA5wDqACMA6wDrABIA7ADsABQA7QDtAC0A7gDvACcA8AD2AAsA+AD4ABgA+QD5AB4A+gD6AB0A+wD7ABcA/AD8ABYA/QD9ABwA/gD+ABsA/wD/ABUBAAEAAC8BAQECACkBAwEEACwBBQEFACkBBgEGACYBCAEIABoBDgEPACIBEAEQABkBEQERAA8BEwETAA8BFQEVAA8BFgEZAA0BGwEdAA0BHgEfACkBIAEjABABKAEpABABKgEqAA4BLAEsAAMBMQExAA0BMwEzAA0BPgE+AA4BPwE/AAoAAgAsAIEAgQADAIIAggAMAIMAhwACAIgAiAAIAIkAiQAMAIoAigAJAIsAiwAIAIwAlAADAJUAlQAEAJYAmQAFAJoAmwAKAJwAnAATAKUApQAUAKcAqAAHAKkAqgAIAKsAqwAJAKwArAAIAK4ArgAIAK8AtQAKALYAvgAMAL8AvwADAMAAwAAMAMEAwQABAMIAwgANAMMAxgAOAMcAywAPAMwAzAAGAM0A0QAQANIA2gALANsA4AARAOEA4QAWAOIA5gARAOcA6gASAOsA6wAQAOwA7AARAO0A7QAIAO4A7gAVAPAA8AALAPEA8QAIAPIA8gAEAPMA8wALAPUA9QAIASoBKgACAT4BPgAMAAIASgACAAsAIwANAA0ALQAOABIAAgAhACQAAgAvAC8AAQAwADAALgAyADIAKgA/AEgAAgBJAEkAKwBLAEsAAgBQAFQAAwBVAFkABABaAGIABQBjAGgABgBpAGkABwBqAG4ACABvAHIACQB3AIEACgCCAIIAIgCDAIkAEACKAIsADACMAJQAEACVAJUADQCWAJkADgCaAJsAIgCcAJwAKQCdAJ0AJwClAKYADwCnAKcAIgCpAKwAIgCuAK4AIgCvALUAJwC2AL8AEADAAMEAJwDCAMIAEADDAMYAJwDHAMsAEwDMAMwAIgDNANEAFQDSANoAFgDbAOAAFwDhAOEAIQDiAOYAFwDnAOoAJADrAOsAFQDsAOwAFwDtAO0AIgDuAO8ADwDwAPYADQD4APgAHAD5APkAJQD6APoAIAD7APsAGgD8APwAGQD9AP0AHwD+AP4AHgD/AP8AKAEAAQAAGwEBAQIAJgEFAQUAJgEGAQYAGAEIAQgAHQEOAQ8AFAEQARAALAERAREAEQETARMAEQEVARUAEQEeAR8AJgEgASMAEgEoASkAEgEqASoAEAEsASwAAwE+AT4AEAE/AT8ACwABAS4AAQABAAIAIQAOABIAAgAhACQAAgAvAC8AAQA/AEgAAgBLAEsAAgBVAFkAAwBaAGIABABjAGgABQBpAGkABgBqAG4ABwBvAHIACAB3AIEACQCDAIkADQCMAJQADQCVAJUACgCWAJkACwCcAJwAEwClAKYADAC2AL8ADQDCAMIADQDHAMsADgDNANEADwDSANoAEADbAOAAEQDhAOEAFADiAOYAEQDnAOoAEgDrAOsADwDsAOwAEQDuAO8ADADwAPYACgEqASoADQE+AT4ADQABAQEAMwADAAMAAAAAAAMACgAGAAgACQAAAAAAAAAAAAUABQACAAcAAgAAAAIAAAABAAEAAQABAAAAAQABAAEAAwADAAQABAAEAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAAAAAAAAABAAAAAQACAC8AAgALAAUADgASAAcAIQAkAAcALwAvAAYAPwBIAAcASwBLAAcAUABUABQAVQBZAAEAWgBiABcAYwBoAAIAaQBpAAMAagBuAAQAbwByABUAdwCBAAgAggCCAAoAgwCJAAsAjACUAAsAlQCVAAkAlgCZABIAmgCbAAoAnACcABgAnQCdABYApQCmABMApwCnAAoAqQCsAAoArgCuAAoArwC1ABYAtgC/AAsAwADBABYAwgDCAAsAwwDGABYAxwDLAAwAzADMAAoAzQDRAA0A0gDaAA4A2wDgAA8A4QDhABEA4gDmAA8A5wDqABAA6wDrAA0A7ADsAA8A7QDtAAoA7gDvABMA8AD2AAkBKgEqAAsBLAEsABQBPgE+AAsAAQAAAAoBKATmAAJERkxUAA5sYXRuACYABAAAAAD//wAHAAAACgAUAB4AKAA6AEQANAAIQVpFIABIQ0FUIABeQ1JUIAB0S0FaIACKTU9MIACgUk9NIAC2VEFUIADMVFJLIADiAAD//wAHAAEACwAVAB8AKQA7AEUAAP//AAgAAgAMABYAIAAqADIAPABGAAD//wAIAAMADQAXACEAKwAzAD0ARwAA//8ACAAEAA4AGAAiACwANAA+AEgAAP//AAgABQAPABkAIwAtADUAPwBJAAD//wAIAAYAEAAaACQALgA2AEAASgAA//8ACAAHABEAGwAlAC8ANwBBAEsAAP//AAgACAASABwAJgAwADgAQgBMAAD//wAIAAkAEwAdACcAMQA5AEMATQBOYWFsdAHWYWFsdAHcYWFsdAHiYWFsdAHoYWFsdAHuYWFsdAH0YWFsdAH6YWFsdAIAYWFsdAIGYWFsdAIMY2FsdAISY2FsdAIYY2FsdAIeY2FsdAIkY2FsdAIqY2FsdAIwY2FsdAI2Y2FsdAI8Y2FsdAJCY2FsdAJIY2FzZQJOY2FzZQJUY2FzZQJaY2FzZQJgY2FzZQJmY2FzZQJsY2FzZQJyY2FzZQJ4Y2FzZQJ+Y2FzZQKEY2NtcAKKY2NtcAKSY2NtcAKaY2NtcAKiY2NtcAKqY2NtcAKyY2NtcAK6Y2NtcALCY2NtcALKY2NtcALSbGlnYQLabGlnYQLgbGlnYQLmbGlnYQLsbGlnYQLybGlnYQL4bGlnYQL+bGlnYQMEbGlnYQMKbGlnYQMQbG9jbAMWbG9jbAMcbG9jbAMibG9jbAMobG9jbAMubG9jbAM0bG9jbAM6bG9jbANAc2FsdANGc2FsdANMc2FsdANSc2FsdANYc2FsdANec2FsdANkc2FsdANqc2FsdANwc2FsdAN2c2FsdAN8c3MwMQOCc3MwMQOIc3MwMQOOc3MwMQOUc3MwMQOac3MwMQOgc3MwMQOmc3MwMQOsc3MwMQOyc3MwMQO4AAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAPAAAAAQAPAAAAAQAPAAAAAQAPAAAAAQAPAAAAAQAPAAAAAQAPAAAAAQAPAAAAAQAPAAAAAQAPAAAAAQALAAAAAQALAAAAAQALAAAAAQALAAAAAQALAAAAAQALAAAAAQALAAAAAQALAAAAAQALAAAAAQALAAAAAgABAAIAAAACAAEAAgAAAAIAAQACAAAAAgABAAIAAAACAAEAAgAAAAIAAQACAAAAAgABAAIAAAACAAEAAgAAAAIAAQACAAAAAgABAAIAAAABAAwAAAABAAwAAAABAAwAAAABAAwAAAABAAwAAAABAAwAAAABAAwAAAABAAwAAAABAAwAAAABAAwAAAABAAoAAAABAAMAAAABAAkAAAABAAYAAAABAAUAAAABAAQAAAABAAcAAAABAAgAAAABAA0AAAABAA0AAAABAA0AAAABAA0AAAABAA0AAAABAA0AAAABAA0AAAABAA0AAAABAA0AAAABAA0AAAABAA4AAAABAA4AAAABAA4AAAABAA4AAAABAA4AAAABAA4AAAABAA4AAAABAA4AAAABAA4AAAABAA4AEwAoADAAPgBIAFIAWgBiAGoAcgB6AIIAigCSAJoAogCqAMAAyADQAAEAAAABAloABgAAAAQAqAC6AM4A4AAGAAAAAgDkAPYABgAAAAIA/gESAAEAAAABARwAAQAAAAEBGgABAAAAAQEYAAEAAAABARYAAQAAAAEBFAABAAAAAQESAAEAAAABARAAAQAAAAEBDgAEAAAAAQEWAAEAAAABAUwAAQAAAAEBSgAGAAAACAFIAVoBbAF+AZABogG0AcYAAQAAAAEB5gAEAAAAAQHsAAEAAAABAgIAAwAAAAECAAABAggAAQAAABAAAwAAAAEB7gACAgAB9gABAAAAEAADAAEB9gABAfYAAAABAAAAEAADAAEB7AABAeQAAAABAAAAEAADAAAAAQHSAAEB5AABAAAAEAADAAEB0gABAcAAAAABAAAAEAADAAAAAgHIAc4AAQHIAAEAAAARAAMAAAACAcABugABAcAAAQAAABEAAQGyAAEAAQGsAAEAAQGyAAUAAQGsAAUAAQGmAAUAAQGgAAUAAQGaAAUAAgGaAAUBGwEcAR0BaAFpAAEBmAABAAgABgAOABYAHgAkACoAMADzAAMAlQCcAPUAAwCVAKkA8gACAJUA8AACAJwA9gACAKUA8QACAKkAAQFgACcAAQFaACcAAwABAV4AAQFkAAAAAQAAABIAAwABAVIAAQFSAAAAAQAAABIAAwABAUYAAQFAAAAAAQAAABIAAwABAToAAQEuAAAAAQAAABIAAwABAS4AAQEcAAAAAQAAABIAAwABASIAAQEKAAAAAQAAABIAAwABARYAAQD4AAAAAQAAABIAAwABAQoAAQDmAAAAAQAAABIAAgD+AA8AcwB0AHUAdgBUAFkAoQDuAMsA0QEbARwBHQFoAWkAAgD8AAQAnQCmAWgBaQABAPoAAgAKABQAAQAEADYAAgEKAAEABACtAAIBCgABAIQASQABAAIAnAClAAIAAQFJAVQAAAACAAEBVgFZAAAAAQACAVgBWQACAAEAAgB2AAAAAQACAWgBaQABAAEAqQABAAEBCgABAAEAMgABAAQAUwBYAMoA0AABAAEAnAABAAUBFgEYARkBWAFZAAEAAQCVAAIAAQBMAE8AAAABAAEAlgABAAEApQABAAEA4gABAAEAwgABAAEASwABAAEBCQABAAEBBwABAAEBEAABAA8ATABNAE4ATwBTAFgAnAClAMoA0AEWARgBGQFYAVkAAQAEAJwApQFYAVkAAQACADIAqQ==) format("truetype");
+  font-weight: inherit;
+  font-style: inherit;
+}
+</style>
+<script>
+  const slider = document.querySelector('.slider');
 
-  <div class="overlay noscript-overlay" style="display: block;"></div>
+function activate(e) {
+const items = document.querySelectorAll('.item');
+e.target.matches('.next') && slider.append(items[0])
+e.target.matches('.prev') && slider.prepend(items[items.length-1]);
+}
 
-  <div class="modal modal-message group modal-warning">
-
-    <div class="modal-title">CodePen requires JavaScript to render the code and preview areas in this view.</div>
-
-    <p>Trying <a href="https://codepen.io/noirsociety/debug/ZEwLGXB">viewing this Pen in Debug Mode</a>, which is the preview area without any iframe and does not require JavaScript. Although what the preview is of might!</p>
-
-    <p>Need to know how to enable JavaScript? <a href="http://enable-javascript.com/" target="_blank" rel="noopener">Go here.</a></p>
-
-    <label class="button button-medium" for="modal-closing-trick">Close this, use anyway.</label>
-
-  </div>
-
-</noscript>
-<textarea id="init-data" style="display:none">{&quot;__browser&quot;:{&quot;country&quot;:&quot;IN&quot;,&quot;device&quot;:&quot;unknown_device&quot;,&quot;mobile&quot;:false,&quot;name&quot;:&quot;microsoft edge&quot;,&quot;platform&quot;:&quot;pc&quot;,&quot;version&quot;:&quot;120&quot;},&quot;__constants&quot;:{},&quot;__CPDATA&quot;:{&quot;domain_iframe&quot;:&quot;https://cdpn.io&quot;,&quot;environment&quot;:&quot;production&quot;,&quot;host&quot;:&quot;codepen.io&quot;,&quot;iframe_allow&quot;:&quot;accelerometer; ambient-light-sensor; camera; display-capture; encrypted-media; geolocation; gyroscope; microphone; midi; payment; vr; web-share&quot;,&quot;iframe_sandbox&quot;:&quot;allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-downloads allow-presentation&quot;},&quot;__graphql&quot;:{&quot;data&quot;:{&quot;data&quot;:{&quot;sessionUser&quot;:{&quot;id&quot;:&quot;mOYKoa&quot;,&quot;name&quot;:&quot;Jaiswal Rohit&quot;,&quot;title&quot;:&quot;Jaiswal Rohit&quot;,&quot;avatar&quot;:&quot;https://assets.codepen.io/t-1/user-default-avatar.jpg?format=auto&amp;version=0&quot;,&quot;currentContext&quot;:{&quot;id&quot;:&quot;mOYKoa&quot;,&quot;title&quot;:&quot;Jaiswal Rohit&quot;,&quot;name&quot;:&quot;Jaiswal Rohit&quot;,&quot;avatar&quot;:&quot;https://assets.codepen.io/t-1/user-default-avatar.jpg?format=auto&amp;version=0&quot;,&quot;username&quot;:&quot;Jaiswal-Rohit&quot;,&quot;__typename&quot;:&quot;User&quot;},&quot;currentTeamId&quot;:null,&quot;username&quot;:&quot;Jaiswal-Rohit&quot;,&quot;admin&quot;:false,&quot;anon&quot;:false,&quot;pro&quot;:false,&quot;verified&quot;:false,&quot;teams&quot;:[],&quot;__typename&quot;:&quot;User&quot;}}},&quot;url&quot;:&quot;https://codepen.io/graphql&quot;,&quot;api&quot;:&quot;cprails&quot;},&quot;__user&quot;:{&quot;anon&quot;:false,&quot;base_url&quot;:&quot;/Jaiswal-Rohit/&quot;,&quot;cohorts&quot;:[],&quot;current_team_hashid&quot;:null,&quot;current_team_id&quot;:0,&quot;hashid&quot;:&quot;mOYKoa&quot;,&quot;id&quot;:11775218,&quot;itemType&quot;:&quot;user&quot;,&quot;name&quot;:&quot;Jaiswal Rohit&quot;,&quot;paid&quot;:false,&quot;tier&quot;:0,&quot;username&quot;:&quot;Jaiswal-Rohit&quot;,&quot;created_at&quot;:&quot;2024-01-22T04:43:17.889Z&quot;,&quot;email_verified&quot;:false,&quot;collections_count&quot;:0,&quot;collections_private_count&quot;:0,&quot;followers_count&quot;:0,&quot;followings_count&quot;:0,&quot;pens_count&quot;:0,&quot;pens_private_count&quot;:0,&quot;projects_count&quot;:0,&quot;projects_private_count&quot;:0},&quot;__firebase&quot;:{&quot;config&quot;:{&quot;apiKey&quot;:&quot;AIzaSyBgLAe7N_MdFpuVofMkcQLGwwhUu5tuxls&quot;,&quot;authDomain&quot;:&quot;codepen-store-production.firebaseapp.com&quot;,&quot;databaseURL&quot;:&quot;https://codepen-store-production.firebaseio.com&quot;,&quot;disabled&quot;:false,&quot;projectId&quot;:&quot;codepen-store-production&quot;},&quot;token&quot;:&quot;eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJodHRwczovL2lkZW50aXR5dG9vbGtpdC5nb29nbGVhcGlzLmNvbS9nb29nbGUuaWRlbnRpdHkuaWRlbnRpdHl0b29sa2l0LnYxLklkZW50aXR5VG9vbGtpdCIsImNsYWltcyI6eyJvd25lcklkIjoibU9ZS29hIiwiYWRtaW4iOmZhbHNlfSwiZXhwIjoxNzA1OTAzMjUxLCJpYXQiOjE3MDU4OTk2NTEsImlzcyI6ImZpcmViYXNlLWFkbWluc2RrLThva3lsQGNvZGVwZW4tc3RvcmUtcHJvZHVjdGlvbi5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsInN1YiI6ImZpcmViYXNlLWFkbWluc2RrLThva3lsQGNvZGVwZW4tc3RvcmUtcHJvZHVjdGlvbi5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsInVpZCI6Im1PWUtvYSJ9.WMAnqpguHNUovh_YfyK9eU7t6NLDKT77L4K51DFZesSCUpqE513rraMXrQPeZbXGccye--ia4y_Mmc0TgwT20Efud6BiApuNqPpXzxvjefeM74Tx2CVfv8KNm5q1VWSlcVAReiZNKUSGZWRlMByc3eApopzVoCbiAL4O3y1IbTHJEvAkckryUFsUSjah2E0b7LX9zImdcn43YknKmRN6vKrGubbR4q1zvfJ4iSABdPCtU2CXp9JZasdayxRHVLe6hoGhk-h4HTt3aJKOLK2ZhFIPQpDabVKWLbmj3xRoCEB7KdcpnJb-XP21Ti2aDGCzkiqaQbcmiH5voJXL_Wx7vw&quot;},&quot;__pay_stripe_public_key&quot;:&quot;pk_live_2GndomDfiklqpSNQn8FrGuwZSMIMzha7DkLJqlYe7IR0ihKAlKdiHg68JJc5eVPt68rzAjzAAVXcUwjySHRCsgjQQ00gtRBUFNH&quot;,&quot;__pay_braintree_env&quot;:&quot;production&quot;,&quot;__boomboom&quot;:{&quot;serve_url&quot;:&quot;https://cdpn.io/cpe/boomboom&quot;,&quot;store_url&quot;:&quot;https://codepen.io/cpe/boomboom/store&quot;},&quot;__editor_config&quot;:{&quot;id&quot;:&quot;classic&quot;,&quot;editors&quot;:[{&quot;id&quot;:&quot;html&quot;,&quot;type&quot;:&quot;html&quot;,&quot;name&quot;:&quot;HTML&quot;,&quot;showEditor&quot;:true,&quot;showSettings&quot;:true,&quot;showProcessors&quot;:true,&quot;embeds&quot;:{&quot;showViewCompiled&quot;:true},&quot;settings&quot;:[{&quot;id&quot;:&quot;processor&quot;,&quot;name&quot;:&quot;HTML Preprocessor&quot;,&quot;type&quot;:&quot;select&quot;,&quot;visible&quot;:true,&quot;values&quot;:[{&quot;id&quot;:&quot;none&quot;,&quot;name&quot;:&quot;None&quot;,&quot;value&quot;:&quot;none&quot;,&quot;default&quot;:true},{&quot;id&quot;:&quot;haml&quot;,&quot;name&quot;:&quot;Haml&quot;,&quot;value&quot;:&quot;haml&quot;},{&quot;id&quot;:&quot;markdown&quot;,&quot;name&quot;:&quot;Markdown&quot;,&quot;value&quot;:&quot;markdown&quot;},{&quot;id&quot;:&quot;slim&quot;,&quot;name&quot;:&quot;Slim&quot;,&quot;value&quot;:&quot;slim&quot;},{&quot;id&quot;:&quot;pug&quot;,&quot;name&quot;:&quot;Pug&quot;,&quot;value&quot;:&quot;pug&quot;}]},{&quot;id&quot;:&quot;html_classes&quot;,&quot;name&quot;:&quot;Add Class(es) to &lt;html&gt;&quot;,&quot;type&quot;:&quot;input&quot;,&quot;placeholder&quot;:&quot;e.g. single post post-1234&quot;,&quot;visible&quot;:true},{&quot;id&quot;:&quot;head&quot;,&quot;name&quot;:&quot;Stuff for &lt;head&gt;&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;placeholder&quot;:&quot;e.g. &lt;meta&gt;, &lt;link&gt;, &lt;script&gt;&quot;,&quot;visible&quot;:true}],&quot;actions&quot;:[{&quot;id&quot;:&quot;tidy_html&quot;,&quot;type&quot;:&quot;tidy_code&quot;,&quot;name&quot;:&quot;Format HTML&quot;,&quot;disabled_processors&quot;:[&quot;haml&quot;,&quot;slim&quot;]},{&quot;id&quot;:&quot;view_compiled_html&quot;,&quot;type&quot;:&quot;view_compiled&quot;,&quot;name&quot;:&quot;View Compiled HTML&quot;,&quot;disabled_processors&quot;:[&quot;none&quot;],&quot;showInEmbeds&quot;:true},{&quot;id&quot;:&quot;analyze_html&quot;,&quot;type&quot;:&quot;analyze&quot;,&quot;name&quot;:&quot;Analyze HTML&quot;},{&quot;id&quot;:&quot;maximize_html_editor&quot;,&quot;type&quot;:&quot;maximize&quot;,&quot;name&quot;:&quot;Maximize HTML Editor&quot;},{&quot;id&quot;:&quot;minimize_html_editor&quot;,&quot;type&quot;:&quot;minimize&quot;,&quot;name&quot;:&quot;Minimize HTML Editor&quot;},{&quot;id&quot;:&quot;fold_all_html&quot;,&quot;type&quot;:&quot;fold_all&quot;,&quot;name&quot;:&quot;Fold All&quot;},{&quot;id&quot;:&quot;unfold_all_html&quot;,&quot;type&quot;:&quot;unfold_all&quot;,&quot;name&quot;:&quot;Unfold All&quot;}],&quot;processors&quot;:[{&quot;id&quot;:&quot;none&quot;,&quot;name&quot;:&quot;None&quot;},{&quot;id&quot;:&quot;haml&quot;,&quot;name&quot;:&quot;Haml&quot;},{&quot;id&quot;:&quot;markdown&quot;,&quot;name&quot;:&quot;Markdown&quot;},{&quot;id&quot;:&quot;slim&quot;,&quot;name&quot;:&quot;Slim&quot;},{&quot;id&quot;:&quot;pug&quot;,&quot;name&quot;:&quot;Pug&quot;}]},{&quot;id&quot;:&quot;css&quot;,&quot;type&quot;:&quot;css&quot;,&quot;name&quot;:&quot;CSS&quot;,&quot;showEditor&quot;:true,&quot;showSettings&quot;:true,&quot;showProcessors&quot;:true,&quot;showVendorPrefixing&quot;:true,&quot;embeds&quot;:{&quot;showViewCompiled&quot;:true},&quot;actions&quot;:[{&quot;id&quot;:&quot;tidy_css&quot;,&quot;type&quot;:&quot;tidy_code&quot;,&quot;name&quot;:&quot;Format CSS&quot;,&quot;disabled_processors&quot;:[&quot;sass&quot;,&quot;stylus&quot;]},{&quot;id&quot;:&quot;view_compiled_css&quot;,&quot;type&quot;:&quot;view_compiled&quot;,&quot;name&quot;:&quot;View Compiled CSS&quot;,&quot;disabled_processors&quot;:[&quot;none&quot;],&quot;disabled_prefixes&quot;:[&quot;neither&quot;,&quot;prefixfree&quot;]},{&quot;id&quot;:&quot;analyze_css&quot;,&quot;type&quot;:&quot;analyze&quot;,&quot;name&quot;:&quot;Analyze CSS&quot;},{&quot;id&quot;:&quot;maximize_css_editor&quot;,&quot;type&quot;:&quot;maximize&quot;,&quot;name&quot;:&quot;Maximize CSS Editor&quot;},{&quot;id&quot;:&quot;minimize_css_editor&quot;,&quot;type&quot;:&quot;minimize&quot;,&quot;name&quot;:&quot;Minimize CSS Editor&quot;},{&quot;id&quot;:&quot;fold_all_css&quot;,&quot;type&quot;:&quot;fold_all&quot;,&quot;name&quot;:&quot;Fold All&quot;,&quot;disabled_processors&quot;:[&quot;sass&quot;]},{&quot;id&quot;:&quot;unfold_all_css&quot;,&quot;type&quot;:&quot;unfold_all&quot;,&quot;name&quot;:&quot;Unfold All&quot;,&quot;disabled_processors&quot;:[&quot;sass&quot;]}],&quot;processors&quot;:[{&quot;id&quot;:&quot;none&quot;,&quot;name&quot;:&quot;None&quot;},{&quot;id&quot;:&quot;less&quot;,&quot;name&quot;:&quot;Less&quot;},{&quot;id&quot;:&quot;scss&quot;,&quot;name&quot;:&quot;SCSS&quot;},{&quot;id&quot;:&quot;sass&quot;,&quot;name&quot;:&quot;Sass&quot;},{&quot;id&quot;:&quot;stylus&quot;,&quot;name&quot;:&quot;Stylus&quot;},{&quot;id&quot;:&quot;postcss&quot;,&quot;name&quot;:&quot;PostCSS&quot;}],&quot;parSuffixes&quot;:[&quot;less&quot;,&quot;scss&quot;,&quot;sass&quot;,&quot;styl&quot;]},{&quot;id&quot;:&quot;js&quot;,&quot;type&quot;:&quot;js&quot;,&quot;name&quot;:&quot;JS&quot;,&quot;showEditor&quot;:true,&quot;showSettings&quot;:true,&quot;showProcessors&quot;:true,&quot;detectImports&quot;:true,&quot;externalResourcesHidden&quot;:false,&quot;embeds&quot;:{&quot;showViewCompiled&quot;:true},&quot;actions&quot;:[{&quot;id&quot;:&quot;tidy_js&quot;,&quot;type&quot;:&quot;tidy_code&quot;,&quot;name&quot;:&quot;Format JavaScript&quot;,&quot;disabled_processors&quot;:[&quot;coffeescript, livescript&quot;]},{&quot;id&quot;:&quot;view_compiled_js&quot;,&quot;type&quot;:&quot;view_compiled&quot;,&quot;name&quot;:&quot;View Compiled JavaScript&quot;,&quot;disabled_processors&quot;:[&quot;none&quot;]},{&quot;id&quot;:&quot;analyze_js&quot;,&quot;type&quot;:&quot;analyze&quot;,&quot;name&quot;:&quot;Analyze JavaScript&quot;},{&quot;id&quot;:&quot;maximize_js_editor&quot;,&quot;type&quot;:&quot;maximize&quot;,&quot;name&quot;:&quot;Maximize JavaScript Editor&quot;},{&quot;id&quot;:&quot;minimize_js_editor&quot;,&quot;type&quot;:&quot;minimize&quot;,&quot;name&quot;:&quot;Minimize JavaScript Editor&quot;},{&quot;id&quot;:&quot;fold_all_js&quot;,&quot;type&quot;:&quot;fold_all&quot;,&quot;name&quot;:&quot;Fold All&quot;},{&quot;id&quot;:&quot;unfold_all_js&quot;,&quot;type&quot;:&quot;unfold_all&quot;,&quot;name&quot;:&quot;Unfold All&quot;}],&quot;processors&quot;:[{&quot;id&quot;:&quot;none&quot;,&quot;name&quot;:&quot;None&quot;},{&quot;id&quot;:&quot;babel&quot;,&quot;name&quot;:&quot;Babel&quot;},{&quot;id&quot;:&quot;typescript&quot;,&quot;name&quot;:&quot;TypeScript&quot;},{&quot;id&quot;:&quot;coffeescript&quot;,&quot;name&quot;:&quot;CoffeeScript&quot;},{&quot;id&quot;:&quot;livescript&quot;,&quot;name&quot;:&quot;LiveScript&quot;}]}],&quot;formatters&quot;:[{&quot;id&quot;:&quot;classic&quot;,&quot;name&quot;:&quot;Classic&quot;,&quot;runOn&quot;:[{&quot;eventType&quot;:&quot;demand&quot;}],&quot;url&quot;:&quot;https://fi593g2v2a.execute-api.us-west-2.amazonaws.com/production/format&quot;}],&quot;layout&quot;:{&quot;default&quot;:&quot;top&quot;},&quot;linters&quot;:[{&quot;id&quot;:&quot;classic&quot;,&quot;name&quot;:&quot;Classic&quot;,&quot;runOn&quot;:[{&quot;eventType&quot;:&quot;demand&quot;}],&quot;url&quot;:&quot;https://fi593g2v2a.execute-api.us-west-2.amazonaws.com/production/lint&quot;}],&quot;preview&quot;:{&quot;intervalMaxWaitMS&quot;:3500,&quot;intervalMS&quot;:1200},&quot;settings&quot;:[{&quot;id&quot;:&quot;behavior&quot;,&quot;name&quot;:&quot;Behavior&quot;,&quot;type&quot;:&quot;setting&quot;},{&quot;id&quot;:&quot;editor&quot;,&quot;name&quot;:&quot;Editor&quot;,&quot;type&quot;:&quot;setting&quot;}]},&quot;__item&quot;:&quot;{\&quot;editor_settings\&quot;:{\&quot;auto_run\&quot;:true,\&quot;autocomplete\&quot;:false,\&quot;code_folding\&quot;:true,\&quot;css_pre_processor\&quot;:\&quot;none\&quot;,\&quot;css_prefix\&quot;:\&quot;neither\&quot;,\&quot;css_starter\&quot;:\&quot;neither\&quot;,\&quot;emmet_active\&quot;:true,\&quot;font_size\&quot;:\&quot;15\&quot;,\&quot;font_type\&quot;:\&quot;system\&quot;,\&quot;format_on_save\&quot;:false,\&quot;html_pre_processor\&quot;:\&quot;none\&quot;,\&quot;indent_with\&quot;:\&quot;spaces\&quot;,\&quot;js_pre_processor\&quot;:\&quot;none\&quot;,\&quot;key_bindings\&quot;:\&quot;normal\&quot;,\&quot;line_numbers\&quot;:true,\&quot;line_wrapping\&quot;:true,\&quot;match_brackets\&quot;:true,\&quot;snippets\&quot;:{\&quot;markupSnippets\&quot;:{},\&quot;stylesheetSnippets\&quot;:{}},\&quot;tab_size\&quot;:2,\&quot;theme\&quot;:\&quot;twilight\&quot;,\&quot;id\&quot;:\&quot;ZEwLGXB\&quot;,\&quot;auto_save\&quot;:true},\&quot;hashid\&quot;:\&quot;ZEwLGXB\&quot;,\&quot;itemType\&quot;:\&quot;pen\&quot;,\&quot;resources\&quot;:[],\&quot;tags\&quot;:[\&quot;responsive\&quot;,\&quot;image\&quot;,\&quot;carousel\&quot;,\&quot;javascript\&quot;,\&quot;animation\&quot;],\&quot;id\&quot;:71518401,\&quot;user_id\&quot;:9237385,\&quot;html\&quot;:\&quot;&lt;main&gt;\\n  &lt;ul class=&#39;slider&#39;&gt;\\n    &lt;li class=&#39;item&#39; style=\\\&quot;background-image: url(&#39;https://cdn.mos.cms.futurecdn.net/dP3N4qnEZ4tCTCLq59iysd.jpg&#39;)\\\&quot;&gt;\\n      &lt;div class=&#39;content&#39;&gt;\\n        &lt;h2 class=&#39;title&#39;&gt;\\\&quot;Lossless Youths\\\&quot;&lt;/h2&gt;\\n        &lt;p class=&#39;description&#39;&gt; Lorem ipsum, dolor sit amet consectetur\\n        adipisicing elit. Tempore fuga voluptatum, iure corporis inventore\\n        praesentium nisi. Id laboriosam ipsam enim.  &lt;/p&gt;\\n        &lt;button&gt;Read More&lt;/button&gt;\\n      &lt;/div&gt;\\n    &lt;/li&gt;\\n    &lt;li class=&#39;item&#39; style=\\\&quot;background-image: url(&#39;https://i.redd.it/tc0aqpv92pn21.jpg&#39;)\\\&quot;&gt;\\n      &lt;div class=&#39;content&#39;&gt;\\n        &lt;h2 class=&#39;title&#39;&gt;\\\&quot;Estrange Bond\\\&quot;&lt;/h2&gt;\\n        &lt;p class=&#39;description&#39;&gt; Lorem ipsum, dolor sit amet consectetur\\n        adipisicing elit. Tempore fuga voluptatum, iure corporis inventore\\n        praesentium nisi. Id laboriosam ipsam enim.  &lt;/p&gt;\\n        &lt;button&gt;Read More&lt;/button&gt;\\n      &lt;/div&gt;\\n    &lt;/li&gt;\\n    &lt;li class=&#39;item&#39; style=\\\&quot;background-image: url(&#39;https://wharferj.files.wordpress.com/2015/11/bio_north.jpg&#39;)\\\&quot;&gt;\\n      &lt;div class=&#39;content&#39;&gt;\\n        &lt;h2 class=&#39;title&#39;&gt;\\\&quot;The Gate Keeper\\\&quot;&lt;/h2&gt;\\n        &lt;p class=&#39;description&#39;&gt; Lorem ipsum, dolor sit amet consectetur\\n        adipisicing elit. Tempore fuga voluptatum, iure corporis inventore\\n        praesentium nisi. Id laboriosam ipsam enim.  &lt;/p&gt;\\n        &lt;button&gt;Read More&lt;/button&gt;\\n      &lt;/div&gt;\\n    &lt;/li&gt;\\n    &lt;li class=&#39;item&#39; style=\\\&quot;background-image: url(&#39;https://images7.alphacoders.com/878/878663.jpg&#39;)\\\&quot;&gt;\\n      &lt;div class=&#39;content&#39;&gt;\\n        &lt;h2 class=&#39;title&#39;&gt;\\\&quot;Last Trace Of Us\\\&quot;&lt;/h2&gt;\\n        &lt;p class=&#39;description&#39;&gt;\\n          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.\\n        &lt;/p&gt;\\n        &lt;button&gt;Read More&lt;/button&gt;\\n      &lt;/div&gt;\\n    &lt;/li&gt;\\n    &lt;li class=&#39;item&#39; style=\\\&quot;background-image: url(&#39;https://theawesomer.com/photos/2017/07/simon_stalenhag_the_electric_state_6.jpg&#39;)\\\&quot;&gt;\\n      &lt;div class=&#39;content&#39;&gt;\\n        &lt;h2 class=&#39;title&#39;&gt;\\\&quot;Urban Decay\\\&quot;&lt;/h2&gt;\\n        &lt;p class=&#39;description&#39;&gt;\\n          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.\\n        &lt;/p&gt;\\n        &lt;button&gt;Read More&lt;/button&gt;\\n      &lt;/div&gt;\\n    &lt;/li&gt;\\n    &lt;li class=&#39;item&#39; style=\\\&quot;background-image: url(&#39;https://da.se/app/uploads/2015/09/simon-december1994.jpg&#39;)\\\&quot;&gt;\\n      &lt;div class=&#39;content&#39;&gt;\\n        &lt;h2 class=&#39;title&#39;&gt;\\\&quot;The Migration\\\&quot;&lt;/h2&gt;\\n        &lt;p class=&#39;description&#39;&gt; Lorem ipsum, dolor sit amet consectetur\\n        adipisicing elit. Tempore fuga voluptatum, iure corporis inventore\\n        praesentium nisi. Id laboriosam ipsam enim.  &lt;/p&gt;\\n        &lt;button&gt;Read More&lt;/button&gt;\\n      &lt;/div&gt;\\n    &lt;/li&gt;\\n  &lt;/ul&gt;\\n  &lt;nav class=&#39;nav&#39;&gt;\\n    &lt;ion-icon class=&#39;btn prev&#39; name=\\\&quot;arrow-back-outline\\\&quot;&gt;&lt;/ion-icon&gt;\\n    &lt;ion-icon class=&#39;btn next&#39; name=\\\&quot;arrow-forward-outline\\\&quot;&gt;&lt;/ion-icon&gt;\\n  &lt;/nav&gt;\\n&lt;/main&gt;\\n\\n&lt;script type=\\\&quot;module\\\&quot; src=\\\&quot;https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js\\\&quot;&gt;&lt;/script&gt;\\n&lt;script nomodule src=\\\&quot;https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js\\\&quot;&gt;&lt;/script&gt;\&quot;,\&quot;css\&quot;:\&quot;* {\\n  margin: 0;\\n  padding: 0;\\n  box-sizing: border-box;\\n}\\n\\nbody {\\n  height: 100vh;\\n  display: grid;\\n  place-items: center;\\n  overflow: hidden;\\n}\\n\\nmain {\\n  position: relative;\\n  width: 100%;\\n  height: 100%;\\n  box-shadow: 0 3px 10px rgba(0,0,0,0.3);\\n}\\n\\n.item {\\n  width: 200px;\\n  height: 300px;\\n  list-style-type: none;\\n  position: absolute;\\n  top: 50%;\\n  transform: translateY(-50%);\\n  z-index: 1;\\n  background-position: center;\\n  background-size: cover;\\n  border-radius: 20px;\\n  box-shadow: 0 20px 30px rgba(255,255,255,0.3) inset;\\n  transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s;\\n\\n  &amp;:nth-child(1), &amp;:nth-child(2) {\\n    left: 0;\\n    top: 0;\\n    width: 100%;\\n    height: 100%;\\n    transform: none;\\n    border-radius: 0;\\n    box-shadow: none;\\n    opacity: 1;\\n  }\\n\\n  &amp;:nth-child(3) { left: 50%; }\\n  &amp;:nth-child(4) { left: calc(50% + 220px); }\\n  &amp;:nth-child(5) { left: calc(50% + 440px); }\\n  &amp;:nth-child(6) { left: calc(50% + 660px); opacity: 0; }\\n}\\n\\n.content {\\n  width: min(30vw,400px);\\n  position: absolute;\\n  top: 50%;\\n  left: 3rem;\\n  transform: translateY(-50%);\\n  font: 400 0.85rem helvetica,sans-serif;\\n  color: white;\\n  text-shadow: 0 3px 8px rgba(0,0,0,0.5);\\n  opacity: 0;\\n  display: none;\\n\\n  &amp; .title {\\n    font-family: &#39;arial-black&#39;;\\n    text-transform: uppercase;\\n  }\\n\\n  &amp; .description {\\n    line-height: 1.7;\\n    margin: 1rem 0 1.5rem;\\n    font-size: 0.8rem;\\n  }\\n\\n  &amp; button {\\n    width: fit-content;\\n    background-color: rgba(0,0,0,0.1);\\n    color: white;\\n    border: 2px solid white;\\n    border-radius: 0.25rem;\\n    padding: 0.75rem;\\n    cursor: pointer;\\n  }\\n}\\n\\n.item:nth-of-type(2) .content {\\n  display: block;\\n  animation: show 0.75s ease-in-out 0.3s forwards;\\n}\\n\\n@keyframes show {\\n  0% {\\n    filter: blur(5px);\\n    transform: translateY(calc(-50% + 75px));\\n  }\\n  100% {\\n    opacity: 1;\\n    filter: blur(0);\\n  }\\n}\\n\\n.nav {\\n  position: absolute;\\n  bottom: 2rem;\\n  left: 50%;\\n  transform: translateX(-50%);\\n  z-index: 5;\\n  user-select: none;\\n\\n  &amp; .btn {\\n    background-color: rgba(255,255,255,0.5);\\n    color: rgba(0,0,0,0.7);\\n    border: 2px solid rgba(0,0,0,0.6);\\n    margin: 0 0.25rem;\\n    padding: 0.75rem;\\n    border-radius: 50%;\\n    cursor: pointer;\\n\\n    &amp;:hover {\\n      background-color: rgba(255,255,255,0.3);\\n    }\\n  }\\n}\\n\\n@media (width &gt; 650px) and (width &lt; 900px) {\\n  .content {\\n    &amp; .title        { font-size: 1rem; }\\n    &amp; .description  { font-size: 0.7rem; }\\n    &amp; button        { font-size: 0.7rem; }\\n  }\\n  .item {\\n    width: 160px;\\n    height: 270px;\\n\\n    &amp;:nth-child(3) { left: 50%; }\\n    &amp;:nth-child(4) { left: calc(50% + 170px); }\\n    &amp;:nth-child(5) { left: calc(50% + 340px); }\\n    &amp;:nth-child(6) { left: calc(50% + 510px); opacity: 0; }\\n  }\\n}\\n\\n@media (width &lt; 650px) {\\n  .content {\\n    &amp; .title        { font-size: 0.9rem; }\\n    &amp; .description  { font-size: 0.65rem; }\\n    &amp; button        { font-size: 0.7rem; }\\n  }\\n  .item {\\n    width: 130px;\\n    height: 220px;\\n\\n    &amp;:nth-child(3) { left: 50%; }\\n    &amp;:nth-child(4) { left: calc(50% + 140px); }\\n    &amp;:nth-child(5) { left: calc(50% + 280px); }\\n    &amp;:nth-child(6) { left: calc(50% + 420px); opacity: 0; }\\n  }\\n}\&quot;,\&quot;js\&quot;:\&quot;const slider = document.querySelector(&#39;.slider&#39;);\\n\\nfunction activate(e) {\\n  const items = document.querySelectorAll(&#39;.item&#39;);\\n  e.target.matches(&#39;.next&#39;) &amp;&amp; slider.append(items[0])\\n  e.target.matches(&#39;.prev&#39;) &amp;&amp; slider.prepend(items[items.length-1]);\\n}\\n\\ndocument.addEventListener(&#39;click&#39;,activate,false);\&quot;,\&quot;html_pre_processor\&quot;:\&quot;none\&quot;,\&quot;css_pre_processor\&quot;:\&quot;none\&quot;,\&quot;js_pre_processor\&quot;:\&quot;none\&quot;,\&quot;html_classes\&quot;:\&quot;\&quot;,\&quot;css_starter\&quot;:\&quot;neither\&quot;,\&quot;js_library\&quot;:null,\&quot;created_at\&quot;:\&quot;2023-11-06T07:52:35.272Z\&quot;,\&quot;updated_at\&quot;:\&quot;2023-11-07T01:04:53.216Z\&quot;,\&quot;title\&quot;:\&quot;Responsive Image Carousel ( Animation )\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;slug_hash\&quot;:\&quot;ZEwLGXB\&quot;,\&quot;head\&quot;:\&quot;\&quot;,\&quot;private\&quot;:false,\&quot;has_animation\&quot;:true,\&quot;team_id\&quot;:0,\&quot;css_prefix\&quot;:\&quot;neither\&quot;,\&quot;template\&quot;:false,\&quot;parent_id\&quot;:0,\&quot;comments_count\&quot;:0,\&quot;custom_screenshot_filename\&quot;:null,\&quot;loves_count\&quot;:0,\&quot;pick\&quot;:false,\&quot;popularity_score\&quot;:0,\&quot;views_count\&quot;:0,\&quot;pick_visible_at\&quot;:null,\&quot;cpid\&quot;:\&quot;018ba39e-7ec8-7670-8d41-af00643d6977\&quot;,\&quot;is_new_editor_pen\&quot;:false,\&quot;pen_hash\&quot;:null}&quot;,&quot;__layoutType&quot;:&quot;top&quot;,&quot;__pageType&quot;:&quot;pen&quot;,&quot;__profiled&quot;:{&quot;base_url&quot;:&quot;/noirsociety&quot;,&quot;hashid&quot;:&quot;GqPKvw&quot;,&quot;id&quot;:9237385,&quot;name&quot;:&quot;noirsociety&quot;,&quot;type&quot;:&quot;user&quot;,&quot;username&quot;:&quot;noirsociety&quot;},&quot;__processorsMap&quot;:{&quot;autoprefixer&quot;:&quot;autoprefixer-10&quot;,&quot;babel&quot;:&quot;babel-7&quot;,&quot;coffeescript&quot;:&quot;coffeescript-2&quot;,&quot;format-1&quot;:&quot;format-1&quot;,&quot;flutter&quot;:&quot;flutter-1&quot;,&quot;haml&quot;:&quot;haml-4&quot;,&quot;less&quot;:&quot;less-3&quot;,&quot;lint-1&quot;:&quot;lint-1&quot;,&quot;livescript&quot;:&quot;livescript-1&quot;,&quot;markdown&quot;:&quot;markdown-11&quot;,&quot;postcss&quot;:&quot;postcss-7&quot;,&quot;pug&quot;:&quot;pug-2&quot;,&quot;sass&quot;:&quot;sass-1&quot;,&quot;scss&quot;:&quot;sass-1&quot;,&quot;sass-ruby-3&quot;:&quot;sass-ruby-3&quot;,&quot;sass-ruby-compass-3&quot;:&quot;sass-ruby-compass-3&quot;,&quot;slim&quot;:&quot;slim-3&quot;,&quot;stylus&quot;:&quot;stylus-0&quot;,&quot;typescript&quot;:&quot;typescript-4&quot;,&quot;vue&quot;:&quot;vue-2&quot;,&quot;vue3&quot;:&quot;vue-3&quot;},&quot;__rtData&quot;:&quot;{\&quot;maxMembers\&quot;:0,\&quot;roomID\&quot;:\&quot;ZEwLGXB/live\&quot;,\&quot;roomType\&quot;:\&quot;live\&quot;,\&quot;updatedAt\&quot;:1699319093,\&quot;user\&quot;:{\&quot;id\&quot;:\&quot;mOYKoa\&quot;,\&quot;hashid\&quot;:\&quot;mOYKoa\&quot;,\&quot;name\&quot;:\&quot;Jaiswal Rohit\&quot;,\&quot;username\&quot;:\&quot;Jaiswal-Rohit\&quot;,\&quot;role\&quot;:\&quot;editor\&quot;}}&quot;,&quot;__eijs&quot;:&quot;https://cpwebassets.codepen.io/assets/embed/ei.js&quot;,&quot;__favicon_mask_icon&quot;:&quot;https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg&quot;,&quot;__favicon_shortcut_icon&quot;:&quot;https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico&quot;,&quot;__path_to_iframe_console_runner&quot;:&quot;https://cpwebassets.codepen.io/assets/editor/iframe/iframeConsoleRunner-6d8bf8b4b479137260842506acbb12717dace0823c023e08b96360e60b0840d9.js&quot;,&quot;__path_to_iframe_refresh_css&quot;:&quot;https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js&quot;,&quot;__path_to_iframe_runtime_errors&quot;:&quot;https://cpwebassets.codepen.io/assets/editor/iframe/iframeRuntimeErrors-4f205f2c14e769b448bcf477de2938c681660d5038bc464e3700256713ebe261.js&quot;,&quot;__path_to_processor_worker&quot;:&quot;https://cpwebassets.codepen.io/assets/packs/router.js&quot;,&quot;__path_to_stop_execution_on_timeout&quot;:&quot;https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js&quot;,&quot;__pen_normalize_css_url&quot;:&quot;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&quot;,&quot;__pen_prefix_free_url&quot;:&quot;https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js&quot;,&quot;__pen_reset_css_url&quot;:&quot;https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css&quot;,&quot;__path_to_infinite_loop_detection&quot;:&quot;https://cpwebassets.codepen.io/assets/packs/js/infiniteLoopDetection-7b6aaf61e4b51aa5a35c.js&quot;,&quot;__theme_url_twilight&quot;:&quot;https://cpwebassets.codepen.io/assets/editor/themes/twilight-9aaad4bd050a758efcccf9634971f22198f8e6930c967d2b826c2eb6e2b72dab.css&quot;,&quot;__theme_url_solarized_dark&quot;:&quot;https://cpwebassets.codepen.io/assets/editor/themes/solarized-dark-86e017c1b5aa2fad89519cd2e414886406221ca6ad1e3d71b4ed0dea9d1a591a.css&quot;,&quot;__theme_url_tomorrow_night&quot;:&quot;https://cpwebassets.codepen.io/assets/editor/themes/tomorrow-night-7e64398cacbba3fce51ef4922ec7f0022042841b7db530108ccd692a03260f87.css&quot;,&quot;__theme_url_oceanic_dark&quot;:&quot;https://cpwebassets.codepen.io/assets/editor/themes/oceanic-dark-6b98e5293790c7250d50d3831b307f0261bd4dac3885925404d4c62d5e989443.css&quot;,&quot;__theme_url_panda&quot;:&quot;https://cpwebassets.codepen.io/assets/editor/themes/panda-e9d0099522a461677194b580289b7a9111265802ce342d2518ab3a6a8aa0cf11.css&quot;,&quot;__theme_url_duotone_dark&quot;:&quot;https://cpwebassets.codepen.io/assets/editor/themes/duotone-dark-c8d8326d7a21f6e40aa22359ee0cda2b9f275653b562fe880eaf1c53d7514fd1.css&quot;,&quot;__theme_url_highcontrast_dark&quot;:&quot;https://cpwebassets.codepen.io/assets/editor/themes/highcontrast-dark-8093a09d9efb70db7a91b0fc760ea742105636fec8f5da88fa6e42f0488e6828.css&quot;,&quot;__theme_url_classic&quot;:&quot;https://cpwebassets.codepen.io/assets/editor/themes/classic-3c9153ea1c6cf71f2e966d20e21174c939476afe755878d31d41e3fec8a26562.css&quot;,&quot;__theme_url_solarized_light&quot;:&quot;https://cpwebassets.codepen.io/assets/editor/themes/solarized-light-c61fedca71afc403b2b6cebcdced6e729104d6e1979b2842e12270cd691f061d.css&quot;,&quot;__theme_url_xq_light&quot;:&quot;https://cpwebassets.codepen.io/assets/editor/themes/xq-light-965e328e6783fc37b4581e2247e066aad05413fd1771c9357839018eb6f0ec15.css&quot;,&quot;__theme_url_oceanic_light&quot;:&quot;https://cpwebassets.codepen.io/assets/editor/themes/oceanic-light-da7e678544c94d1d04358376eb42592f75c1e75a0a695fc6a67809bfd09de0c5.css&quot;,&quot;__theme_url_mdn_like&quot;:&quot;https://cpwebassets.codepen.io/assets/editor/themes/mdn-like-43cc4180854f31c853996bc6515f0a931a77e9e136846695777363ec422fbac7.css&quot;,&quot;__theme_url_duotone_light&quot;:&quot;https://cpwebassets.codepen.io/assets/editor/themes/duotone-light-d1de651812bc869121a151945c195c4fe3eee9aef9418fab6347af4d447943f0.css&quot;,&quot;__theme_url_highcontrast_light&quot;:&quot;https://cpwebassets.codepen.io/assets/editor/themes/highcontrast-light-0064ca82ddfc58ccc2ffe724e0792c3972623de9ced4899a8abaac940fb12b5c.css&quot;,&quot;__theme_url_scoped_twilight&quot;:&quot;https://cpwebassets.codepen.io/assets/editor/themes/scoped/twilight-747abf5fcdcfcc34aaf0188d82b9b26486f3f162ff2a2edda74b4dacf507e11b.css&quot;,&quot;__theme_url_scoped_solarized_dark&quot;:&quot;https://cpwebassets.codepen.io/assets/editor/themes/scoped/solarized-dark-231b05078567b4261949a0a1d5fc71c12603e3f64fe4f38cdc0d209ed40aca26.css&quot;,&quot;__theme_url_scoped_tomorrow_night&quot;:&quot;https://cpwebassets.codepen.io/assets/editor/themes/scoped/tomorrow-night-ca87449e58a18912d21374cafd75ed2a7534fedab962b236658f2b98f19c5d78.css&quot;,&quot;__theme_url_scoped_oceanic_dark&quot;:&quot;https://cpwebassets.codepen.io/assets/editor/themes/scoped/oceanic-dark-12ae770e8e2c45910caf9927c8af1ed00523f18bc6db6f5fff002e47edf3dc99.css&quot;,&quot;__theme_url_scoped_panda&quot;:&quot;https://cpwebassets.codepen.io/assets/editor/themes/scoped/panda-719a82141c299def913b5f554ccfe9fae2de09533313298296b5b3ce7aee28e4.css&quot;,&quot;__theme_url_scoped_duotone_dark&quot;:&quot;https://cpwebassets.codepen.io/assets/editor/themes/scoped/duotone-dark-bccf883377bba488d92625bf9cfe08b5f51c1961762d8b6b15b1a84a39c1211e.css&quot;,&quot;__theme_url_scoped_highcontrast_dark&quot;:&quot;https://cpwebassets.codepen.io/assets/editor/themes/scoped/highcontrast-dark-033ad3ce22e59155e26aa2b1b834d13fd5cb1adda85c6d2403fe1b2ec50e4196.css&quot;,&quot;__theme_url_scoped_classic&quot;:&quot;https://cpwebassets.codepen.io/assets/editor/themes/scoped/classic-c67f3b1ba3fd6a1e7720c0c756f627011fffadf0184174bd54fab9a25be3d44b.css&quot;,&quot;__theme_url_scoped_solarized_light&quot;:&quot;https://cpwebassets.codepen.io/assets/editor/themes/scoped/solarized-light-95d553a44a4d2c66d3592f21ffbb0baefe722d6512bca6823d10199fca8fc947.css&quot;,&quot;__theme_url_scoped_xq_light&quot;:&quot;https://cpwebassets.codepen.io/assets/editor/themes/scoped/xq-light-7fd449a96c7b154cdd8ff7495c347488ff77569a318de722f70b11c0b4fa2822.css&quot;,&quot;__theme_url_scoped_oceanic_light&quot;:&quot;https://cpwebassets.codepen.io/assets/editor/themes/scoped/oceanic-light-f710d408861123bbaca1849ade8a4723b9279cde164a98c6b0e517860551db35.css&quot;,&quot;__theme_url_scoped_mdn_like&quot;:&quot;https://cpwebassets.codepen.io/assets/editor/themes/scoped/mdn-like-33ee40cbc4c75e788ee48c2e261f281b171c068044267fd8f718b21e8a406e87.css&quot;,&quot;__theme_url_scoped_duotone_light&quot;:&quot;https://cpwebassets.codepen.io/assets/editor/themes/scoped/duotone-light-9da717d563fc06042fe470be45b46a12488043676deb753fc565e082e03261ca.css&quot;,&quot;__theme_url_scoped_highcontrast_light&quot;:&quot;https://cpwebassets.codepen.io/assets/editor/themes/scoped/highcontrast-light-9997daca97163b5cd72f58b8a0d7c025727b5cd8f7625c48622f8d7ab11822f7.css&quot;}</textarea>
-<script src="https://cpwebassets.codepen.io/assets/common/browser_support-2c1a3d31dbc6b5746fb7dacdbc81dd613906db219f13147c66864a6c3448246c.js"></script>
-<script src="https://cpwebassets.codepen.io/assets/common/everypage-b1fe1ca71dab80c49b8e5ebed21506a80cb6fe64ecaa8c6dddae5aca7b1e34d7.js"></script>
-<script src="https://apc.codepen.io/69186.js"></script>
-<script src="https://cpwebassets.codepen.io/assets/common/appcues-dabea89133f3a919e973a927aebbc27318967ac159bc8c7b657d656880822e14.js"></script>
-<script src="https://cpwebassets.codepen.io/assets/packs/js/vendor-86765d3e7a1676434780.chunk.js"></script>
-<script src="https://cpwebassets.codepen.io/assets/packs/js/1-be8bb1046a81eda77740.chunk.js"></script>
-<script src="https://cpwebassets.codepen.io/assets/packs/js/everypage-f5e583528de1081fa2c8.js"></script>
-<script src="https://cpwebassets.codepen.io/assets/packs/js/vendor-86765d3e7a1676434780.chunk.js"></script>
-<script src="https://cpwebassets.codepen.io/assets/packs/js/1-be8bb1046a81eda77740.chunk.js"></script>
-<script src="https://cpwebassets.codepen.io/assets/packs/js/processorRouter-33551e9270035e28b98b.js"></script>
-<script src="https://static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
-<script src="https://cpwebassets.codepen.io/assets/editor/global/commonLibs-18d595d95e5894ceae5661c7e40deeca7df254309b42f89edce76949b15a0f31.js"></script>
-<script src="https://cpwebassets.codepen.io/assets/editor/global/codemirror-e628acccbc140ed80f9daa48b5e64c775855e64a41d7fad48e7583a7819aa9d6.js"></script>
-<script src="https://cpwebassets.codepen.io/assets/libs/emmet-codemirror-plugin-f3955bea0403e8137caacd73a1e42bb551794f7ce15ae59103c64a2736b2757c.js"></script>
-<script src="https://cpwebassets.codepen.io/assets/editor/pen/index-d9e61aa9e79a883bdecd4d9a1b6b4226ceabfc5401b76569a245cd9a214f7a1b.js"></script>
-</body>
-</html>
+document.addEventListener('click',activate,false);
+</script>
